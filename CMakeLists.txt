@@ -6,12 +6,10 @@ list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/src)
 
 set (DATADIR "${CMAKE_INSTALL_PREFIX}/share")
 
-set (PKGDATADIR "${DATADIR}/apollo11")
+set (PKGDATADIR "${DATADIR}/gifup")
 
 set (EXEC_NAME "gifup")
-set (RELEASE_NAME "Hello Houston")
-set (VERSION "0.1")
-set (VERSION_INFO "space_age")
+set (VERSION "0.0.1")
 
 find_package(PkgConfig)
 
@@ -38,7 +36,6 @@ vala_precompile(VALA_C ${EXEC_NAME}
 PACKAGES
     granite
     gtk+-3.0
-    ffmpeg
 )
 
 add_executable(${EXEC_NAME} ${VALA_C})
