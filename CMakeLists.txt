@@ -33,6 +33,7 @@ vala_precompile(VALA_C ${EXEC_NAME}
     src/Gifup.vala
     src/Window.vala
     src/Utils.vala
+    src/SettingsDialog.vala
     
 PACKAGES
     granite
