@@ -3,18 +3,15 @@
 <component type="desktop">
   <id>com.github.bharatkalluri.gifup.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_group>elementary</project_group>
   <project_license>GPL-3.0+</project_license>
   <_name>Gifup</_name>
-  <_summary>Create GIFs from Videos.</_summary>
+  <_summary>Create GIFs from Videos quickly!</_summary>
   <description>
     <_p>
       Gifup is a simple and effective way to create GIFs from video files in elementary OS.
+      Control the start and end time of the video(with previews!), Frames per second and Height of your GIF!
     </_p>
   </description>
-  <releases>
-    <release timestamp="1427915704" version="0.0.1"/>
-  </releases>
   <provides>
     <binary>gifup</binary>
   </provides>
@@ -24,4 +21,7 @@
   <url type="donation">email me :-)</url>
   <url type="help">https://github.com/bharatkalluri/gifup</url>
   <update_contact>kalluribharat@gmail.com</update_contact>
+  <custom>
+     <value key="x-appcenter-color-primary">#f0742d</value>
+  </custom>
 </component>
