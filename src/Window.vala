@@ -80,6 +80,40 @@ namespace Gifup {
             stack.set_transition_type (Gtk.StackTransitionType.SLIDE_LEFT_RIGHT);
             stack.margin_start = 10;
 
+            basic_options ();
+            stack.add_titled (grid_basic, "Basic", "Basic Options");
+            advance_options ();
+            stack.add_titled (grid_advance, "Advanced", "Advanced Options");
+
+            Gtk.StackSwitcher stack_switcher = new Gtk.StackSwitcher ();
+            stack_switcher.halign = Gtk.Align.CENTER;
+            stack_switcher.set_stack (stack);
+            stack_switcher.margin_start = 10;
+
+            grid.attach (stack_switcher, 0, 1, 1, 1);
+            grid.attach (stack, 0, 2, 1, 1);
+
+            // A tip saying hit enter for frame preview
+            llabel("<small>Tip: Click enter after entering time for previews!</small>", 10, 10, 10);
+            grid.attach (label, 0, 5, 2, 1);
+
+            //  Button For making GIF at row 6 of grid_advance
+            button = new Gtk.Button.with_label ("Make GIF!");
+            button.get_style_context ().add_class ("suggested-action");
+            button.margin_start = 10;
+            button.margin_end = 10;
+            button.margin_bottom = 10;
+            button.margin_top = 10;
+            grid.attach (button,0, 6, 2, 1);
+            // Event for gif create button
+            button.clicked.connect (() => {
+                gif_create();
+            });
+
+            add (grid);
+        }
+
+        void basic_options () {
             // Basic Options
             // giving widgets to stack
             grid_basic = new Grid ();
@@ -115,10 +149,10 @@ namespace Gifup {
             image_start.margin_start = 10;
             grid_basic.attach(image_end, 1, 3, 1, 1);
             // Basic Options end
-            stack.add_titled (grid_basic, "Basic", "Basic Options");
+        }
 
+        void advance_options () {
             // Advance Options start
-
             grid_advance = new Grid ();
             grid_advance.column_spacing = 12;
             grid_advance.row_spacing = 6;
@@ -138,32 +172,7 @@ namespace Gifup {
             entry_fps.margin_end = 10;
             grid_advance.attach (label, 0, 5, 1, 1);
             grid_advance.attach (entry_fps, 1, 5, 1, 1);
-            
-            stack.add_titled (grid_advance, "Advanced", "Advanced Options");
             // Advance Options End
-
-            Gtk.StackSwitcher stack_switcher = new Gtk.StackSwitcher ();
-            stack_switcher.halign = Gtk.Align.CENTER;
-            stack_switcher.set_stack (stack);
-            stack_switcher.margin_start = 10;
-
-            grid.attach (stack_switcher, 0, 1, 1, 1);
-            grid.attach (stack, 0, 2, 1, 1);
-
-            //  Button For making GIF at row 6 of grid_advance
-            button = new Gtk.Button.with_label ("Make GIF!");
-            button.get_style_context ().add_class ("suggested-action");
-            button.margin_start = 10;
-            button.margin_end = 10;
-            button.margin_bottom = 10;
-            button.margin_top = 10;
-            grid.attach (button,0, 6, 2, 1);
-            // Event for gif create button
-            button.clicked.connect (() => {
-                gif_create();
-            });
-
-            add (grid);
         }
 
         public void llabel (string text, int margin_top, int margin_start, int margin_end) {
