@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-    <img src="https://github.com/bharatkalluri/Gifup/blob/master/data/images/screenshot.png" alt="Screenshot"> <br>
+    <img src="https://github.com/BharatKalluri/Gifup/blob/master/Screenshot.png" alt="Screenshot"> <br>
   <a href="https://github.com/bharatkalluri/Gifup/issues/new"> Report a problem! </a>
 </p>
 
