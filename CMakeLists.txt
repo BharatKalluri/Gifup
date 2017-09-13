@@ -38,6 +38,7 @@ vala_precompile(VALA_C ${EXEC_NAME}
 PACKAGES
     granite
     gtk+-3.0
+    ffmpeg
 )
 
 add_executable(${EXEC_NAME} ${VALA_C})
