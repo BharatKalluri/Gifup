@@ -6,14 +6,14 @@
 <br/>
 
 <p align="center">
-   <a href="https://github.com/bharatkalluri/gifup/blob/master/LICENSE">
+   <a href="https://github.com/bharatkalluri/Gifup/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg">
    </a>
 </p>
 
 <p align="center">
-    <img src="https://github.com/bharatkalluri/gifup/blob/master/data/images/screenshot.png" alt="Screenshot"> <br>
-  <a href="https://github.com/bharatkalluri/gifup/issues/new"> Report a problem! </a>
+    <img src="https://github.com/bharatkalluri/Gifup/blob/master/data/images/screenshot.png" alt="Screenshot"> <br>
+  <a href="https://github.com/bharatkalluri/Gifup/issues/new"> Report a problem! </a>
 </p>
 
 ### Installation
@@ -29,8 +29,8 @@ sudo apt install elementary-sdk
 
 clone the repository
 ```
-git clone https://github.com/Bharatkalluri/gifup.git
-cd gifup
+git clone https://github.com/Bharatkalluri/Gifup.git
+cd Gifup
 ```
 
 build the project
