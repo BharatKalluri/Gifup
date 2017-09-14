@@ -1,0 +1,15 @@
+Source: gifup
+Section: x11
+Priority: extra
+Maintainer: Bharat Kalluri <kalluribharat@gmail.com>
+Build-Depends: cmake (>= 2.8),
+               debhelper (>= 9),
+               libgtk-3-dev,
+               valac (>= 0.16),
+               ffmpeg
+Standards-Version: 3.9.3
+
+Package: gifup
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Create GIFs from videos with ease!
