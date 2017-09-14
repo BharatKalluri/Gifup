@@ -15,5 +15,4 @@ Standards-Version: 3.9.6
 Package: com.github.bharatkalluri.gifup
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Gifup
-Create GIFs from videos with ease!
+Description: Create GIFs from videos.
