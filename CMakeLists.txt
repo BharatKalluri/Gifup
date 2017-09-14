@@ -54,6 +54,4 @@ add_subdirectory (po)
 
 
 # install our .appdata.xml file so AppCenter will see it
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.bharatkalluri.gifup.appdata.xml DESTINATION ${DATADIR}/metainfo/)
-
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/gifup.svg DESTINATION share/icons/hicolor/scalable/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.bharatkalluri.gifup.appdata.xml DESTINATION /usr/share/metainfo/)
