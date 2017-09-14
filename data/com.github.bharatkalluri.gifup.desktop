@@ -4,7 +4,7 @@ GenericName=Create GIFs in Linux
 Comment=Create GIFs from Videos!
 Categories=GTK;Utility;
 Exec=com.github.bharatkalluri.gifup
-Icon=gifup
+Icon=com.github.bharatkalluri.gifup
 Terminal=false
 Type=Application
 X-GNOME-Gettext-Domain=com.github.bharatkalluri.gifup
@@ -13,5 +13,5 @@ Keywords=gif;
 Actions=About;
 
 [Desktop Action About]
-Exec=gifup --about
+Exec=com.github.bharatkalluri.gifup --about
 Name=About Gifup
