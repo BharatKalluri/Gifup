@@ -31,7 +31,6 @@ vala_precompile(VALA_C ${EXEC_NAME}
     src/Gifup.vala
     src/Window.vala
     src/Utils.vala
-    src/SettingsDialog.vala
     
 PACKAGES
     granite
@@ -42,7 +41,7 @@ add_executable(${EXEC_NAME} ${VALA_C})
 
 install (TARGETS ${EXEC_NAME} RUNTIME DESTINATION bin)
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.bharatkalluri.gifup.desktop DESTINATION ${DATADIR}/applications/)
-install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/gifup.svg" DESTINATION ${DATADIR}/pixmaps/)
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.bharatkalluri.gifup.svg" DESTINATION ${DATADIR}/pixmaps/)
 
 
 #translation files

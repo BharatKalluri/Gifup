@@ -7,7 +7,7 @@
   <name>Gifup</name>
   <summary>Create GIFs from Videos quickly!</summary>
   <description>
-    <p>Gifup is a simple and effective way to create GIFs from video files in elementary OS.</p>
+    <p>Gifup is a simple and effective way to create GIFs from video files.</p>
     <p>Features:</p>
     <ul>
       <li>Control start and end time of the GIF</li>
@@ -16,7 +16,7 @@
     </ul>
   </description>
   <provides>
-    <binary>gifup</binary>
+    <binary>com.github.bharatkalluri.gifup</binary>
   </provides>
   <developer_name>Bharat Kalluri</developer_name>
   <url type="homepage">https://github.com/bharatkalluri/gifup</url>
