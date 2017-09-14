@@ -36,7 +36,7 @@ namespace Gifup {
 
             // Header Bar
             var headerbar = new Gtk.HeaderBar ();
-            headerbar.title = _("Gifup");
+            headerbar.title = "Gifup";
             headerbar.get_style_context ().add_class("flat");
             headerbar.show_close_button = true;
             this.set_titlebar (headerbar);

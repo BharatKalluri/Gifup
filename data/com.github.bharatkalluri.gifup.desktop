@@ -2,14 +2,14 @@
 Name=Gifup
 GenericName=Create GIFs in Linux
 Comment=Create GIFs from Videos!
-Categories=GTK;Utility
+Categories=GTK;Utility;
 Exec=gifup
 Icon=gifup
 Terminal=false
 Type=Application
 X-GNOME-Gettext-Domain=gifup
 X-GNOME-UsesNotifications=true
-Keywords=gif
+Keywords=gif;
 Actions=About;
 
 [Desktop Action About]

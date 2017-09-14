@@ -4,13 +4,16 @@
   <id>com.github.bharatkalluri.gifup.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
-  <_name>Gifup</_name>
-  <_summary>Create GIFs from Videos quickly!</_summary>
+  <name>Gifup</name>
+  <summary>Create GIFs from Videos quickly!</summary>
   <description>
-    <_p>
-      Gifup is a simple and effective way to create GIFs from video files in elementary OS.
-      Control the start and end time of the video(with previews!), Frames per second and Height of your GIF!
-    </_p>
+    <p>Gifup is a simple and effective way to create GIFs from video files in elementary OS.</p>
+    <p>Features:</p>
+    <ul>
+      <li>Control start and end time of the GIF</li>
+      <li>Watch live preview of the start and end frames</li>
+      <li>Control frames per second and height of the gif</li>
+    </ul>
   </description>
   <provides>
     <binary>gifup</binary>
