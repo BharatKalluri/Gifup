@@ -9,10 +9,9 @@ Build-Depends: cmake (>= 2.8),
                debhelper (>= 9),
                libgtk-3-dev,
                valac (>= 0.26)
-Depends: ffmpeg
 Standards-Version: 3.9.6
 
 Package: com.github.bharatkalluri.gifup
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ffmpeg, ${misc:Depends}, ${shlibs:Depends}
 Description: Create GIFs from videos.
