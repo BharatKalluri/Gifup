@@ -28,6 +28,18 @@ namespace Gifup {
         public Utils utils;
 
         public Window () {
+        
+            const string STYLESHEET_GIFUP = """ 
+                @define-color colorPrimary #F1762F;
+                @define-color textColorPrimary #fafafa;
+            """;
+            
+            Granite.Widgets.Utils.set_theming_for_screen (
+                this.get_screen (),
+                STYLESHEET_GIFUP,
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
+            
             utils = new Utils ();
             //  Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = true;
             this.screen = Gdk.Screen.get_default ();
