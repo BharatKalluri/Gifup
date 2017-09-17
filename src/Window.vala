@@ -14,11 +14,12 @@ namespace Gifup {
         public Gtk.Entry entry_height;
         
         private Gtk.Entry entry_fps;
-        private Gtk.Button button;
+        private Gtk.Button gif_button;
         private Gtk.Button file_button;
         private Gtk.FileChooserDialog file_choooser;
         private Gtk.Image image_start;
         private Gtk.Image image_end;
+        private Gtk.Spinner spinner;
 
         private string selected_file;
         private string selected_path;
@@ -28,7 +29,6 @@ namespace Gifup {
 
         public Window () {
             utils = new Utils ();
-
             //  Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = true;
             this.screen = Gdk.Screen.get_default ();
             this.resizable = false;
@@ -72,6 +72,7 @@ namespace Gifup {
                     print(this.selected_path);
                     selected_filename = filename_arr[filename_arr.length-1];
                     file_button.label = selected_filename;
+                    gif_button.set_sensitive(true);
                 }
             });
 
@@ -93,21 +94,27 @@ namespace Gifup {
             grid.attach (stack_switcher, 0, 1, 1, 1);
             grid.attach (stack, 0, 2, 1, 1);
 
+            // A spinner to indicate program is working
+            spinner = new Gtk.Spinner ();
+            grid.attach (spinner, 0, 4, 2, 1);
+
             // A tip saying hit enter for frame preview
             llabel("<small>Tip: Click enter after entering time for previews!</small>", 10, 10, 10);
             grid.attach (label, 0, 5, 2, 1);
 
             //  Button For making GIF at row 6 of grid_advance
-            button = new Gtk.Button.with_label ("Make GIF!");
-            button.get_style_context ().add_class ("suggested-action");
-            button.margin_start = 10;
-            button.margin_end = 10;
-            button.margin_bottom = 10;
-            button.margin_top = 10;
-            grid.attach (button,0, 6, 2, 1);
+            gif_button = new Gtk.Button.with_label ("Make GIF!");
+            gif_button.get_style_context ().add_class ("suggested-action");
+            gif_button.margin_start = 10;
+            gif_button.margin_end = 10;
+            gif_button.margin_bottom = 10;
+            gif_button.margin_top = 10;
+            gif_button.set_sensitive(false);
+            grid.attach (gif_button,0, 6, 2, 1);
             // Event for gif create button
-            button.clicked.connect (() => {
+            gif_button.clicked.connect (() => {
                 gif_create();
+                this.spinner.active = true;
             });
 
             add (grid);
@@ -120,7 +127,7 @@ namespace Gifup {
             grid_basic.column_spacing = 12;
             grid_basic.row_spacing = 6;
             //  Start Time at row 1 of grid_basic
-            llabel ("<b>Start Time (In seconds) </b>", 5, 10, 10);
+            llabel ("<b>Start Time (hh:mm:ss) </b>", 5, 10, 10);
             entry_start = new Gtk.Entry ();
             entry_start.margin_top = 5;
             entry_start.margin_end = 10;
@@ -130,7 +137,7 @@ namespace Gifup {
             grid_basic.attach (this.label, 0, 1, 1, 1);
             grid_basic.attach (entry_start, 1, 1, 1, 1);
             //  End time at row 2 of grid_basic
-            llabel ("<b>End Time (In seconds) </b>", 5, 10, 10);
+            llabel ("<b>End Time (hh:mm:ss) </b>", 5, 10, 10);
             entry_end = new Gtk.Entry ();
             entry_end.activate.connect ( () => {
                 frame_picture(entry_end.get_text(), "gifup_end", "end");
@@ -203,21 +210,22 @@ namespace Gifup {
 
         void gif_create () {
             //  create gif using the file selected and the timings given
-            string [] cmd = {"ffmpeg", "-ss", this.entry_start.get_text(), "-i", this.selected_file, "-to", this.entry_end.get_text(), "-r", this.entry_fps.get_text(), "-vf", "scale=" + this.entry_height.get_text() + ":-1", this.selected_path + "gifout.gif", "-y"};
+            string [] cmd = {"ffmpeg", "-ss", utils.duration_in_seconds (this.entry_start.get_text()), "-i", this.selected_file, "-to", utils.duration_in_seconds (this.entry_end.get_text()), "-r", this.entry_fps.get_text(), "-vf", "scale=" + this.entry_height.get_text() + ":-1", this.selected_path + "gifout.gif", "-y"};
             utils.execute_command_async.begin (cmd, (obj, async_res) => {
                 try {
                     if(subprocess.wait_check ()) {
-                        create_dialog ("Gif is Up! at " + this.selected_path);
+                        create_dialog ("Gif is Up at " + this.selected_path + " !");
                     }
         
                 } catch (Error e) {
-                    create_dialog ("An error occurred, Please try again.");
+                    create_dialog ("Check if all fields have sane values and try again.");
                 }
+                this.spinner.active = false;
             });
         }
 
         void frame_picture (string frame_number, string file_name, string location) {
-            string [] cmd = {"ffmpeg", "-ss", frame_number, "-i", this.selected_file, "-frames:v", "1", "-filter:v", "scale=150:-1", "/tmp/" + file_name + ".bmp", "-y"};
+            string [] cmd = {"ffmpeg", "-ss", utils.duration_in_seconds (frame_number), "-i", this.selected_file, "-frames:v", "1", "-filter:v", "scale=150:-1", "/tmp/" + file_name + ".bmp", "-y"};
             utils.execute_command_async.begin (cmd, (obj, async_res) => {
                 try {
                     if(subprocess.wait_check ()) {
@@ -234,7 +242,7 @@ namespace Gifup {
                     }
         
                 } catch (Error e) {
-                    create_dialog ("An error occurred,Check and try again!");
+                    create_dialog ("Is a file selected?");
                 }
             });  
         }

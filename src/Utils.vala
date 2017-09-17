@@ -1,6 +1,27 @@
 namespace Gifup { 
     class Utils : Gtk.Window {
 
+        public string duration_in_seconds (string duration) {
+            string[] str = duration.split (".");
+            string[] time = str[0].split (":");
+            int hours = 0;
+            int mins = 0;
+            int secs = 0;
+            if (time.length==1){
+                secs = int.parse (time[0]);
+            } else if (time.length==2){
+                secs = int.parse (time[1]);
+                mins = int.parse (time[0]);
+            } else if (time.length==3){
+                secs = int.parse (time[2]);
+                mins = int.parse (time[1]);
+                hours = int.parse (time[0]);
+            }            
+
+            var converted_int =  secs + (hours * 3600) + (mins * 60);
+            string converted_string = converted_int.to_string ();
+            return converted_string;
+        }
 
         public async void execute_command_async (string[] spawn_args) {
             try {
