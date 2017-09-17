@@ -22,7 +22,12 @@
   <url type="homepage">https://github.com/bharatkalluri/gifup</url>
   <url type="bugtracker">https://github.com/bharatkalluri/gifup/issues</url>
   <url type="donation">email me :-)</url>
-  <url type="help">https://github.com/bharatkalluri/gifup</url>
+  <url type="help">https://github.com/bharatkalluri/gifup/issues</url>
+  <screenshots>
+    <screenshot type="default">
+        <image>https://github.com/BharatKalluri/Gifup/blob/master/Screenshot.png</image>
+    </screenshot>
+  </screenshots>
   <update_contact>kalluribharat@gmail.com</update_contact>
   <custom>
      <value key="x-appcenter-color-primary">#C64A89</value>
