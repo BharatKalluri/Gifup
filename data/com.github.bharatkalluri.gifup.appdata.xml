@@ -25,6 +25,6 @@
   <url type="help">https://github.com/bharatkalluri/gifup</url>
   <update_contact>kalluribharat@gmail.com</update_contact>
   <custom>
-     <value key="x-appcenter-color-primary">#f0742d</value>
+     <value key="x-appcenter-color-primary">#C64A89</value>
   </custom>
 </component>
