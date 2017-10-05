@@ -1,78 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-05 23:36+0200\n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: fr\n"
+"POT-Creation-Date: 2017-10-05 23:37+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
-"X-Generator: Poedit 2.0.4\n"
 
 #: ../src/Window.vala:50
 msgid "Select a File!"
-msgstr "Sélectionnez un fichier !"
+msgstr ""
 
 #: ../src/Window.vala:69
 msgid "Basic Options"
-msgstr "Options de base"
+msgstr ""
 
 #: ../src/Window.vala:71
 msgid "Advanced Options"
-msgstr "Options avancées"
+msgstr ""
 
 #: ../src/Window.vala:85
 msgid "Tip: Click enter after entering time for previews!"
-msgstr "Conseil : Appuyez sur entrée après avoir mis le temps pour voir un aperçu !"
+msgstr ""
 
 #: ../src/Window.vala:92
 msgid "Make GIF!"
-msgstr "Créer un GIF !"
+msgstr ""
 
 #: ../src/Window.vala:116
 msgid "Start Time (hh:mm:ss):"
-msgstr "Temps de début (hh:mm:ss) :"
+msgstr ""
 
 #: ../src/Window.vala:120
 msgid "End Time (hh:mm:ss):"
-msgstr "Temps de fin (hh:mm:ss) :"
+msgstr ""
 
 #: ../src/Window.vala:149
 msgid "Gif Height:"
-msgstr "Taille du Gif :"
+msgstr ""
 
 #: ../src/Window.vala:154
 msgid "Frames Per Seconds:"
-msgstr "Images par seconde :"
+msgstr ""
 
 #: ../src/Window.vala:168
 msgid "Status"
-msgstr "Status"
+msgstr ""
 
 #: ../src/Window.vala:174
 msgid "Open File"
-msgstr "Ouvrir un fichier"
+msgstr ""
 
 #: ../src/Window.vala:176
 msgid "_Cancel"
-msgstr "_Annuler"
+msgstr ""
 
 #: ../src/Window.vala:177
 msgid "_Open"
-msgstr "_Ouvrir"
+msgstr ""
 
 #: ../src/Window.vala:194
 msgid "Gif is Up at %s!"
-msgstr "Le Gif est disponible dans %s !"
+msgstr ""
 
 #: ../src/Window.vala:199
 msgid "Check if all fields have sane values and try again."
-msgstr "Vérifiez si tous les champs ont des valeurs correctes et réessayez."
+msgstr ""
 
 #: ../src/Window.vala:219
 msgid "Is a file selected?"
-msgstr "Un fichier est-il sélectionné ?"
+msgstr ""
