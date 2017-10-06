@@ -1,7 +1,5 @@
-namespace Gifup { 
-    class Utils : Gtk.Window {
-
-        public string duration_in_seconds (string duration) {
+namespace Gifup.Utils {
+        public static string duration_in_seconds (string duration) {
             string[] str = duration.split (".");
             string[] time = str[0].split (":");
             int hours = 0;
@@ -16,21 +14,18 @@ namespace Gifup {
                 secs = int.parse (time[2]);
                 mins = int.parse (time[1]);
                 hours = int.parse (time[0]);
-            }            
+            }
 
             var converted_int =  secs + (hours * 3600) + (mins * 60);
-            string converted_string = converted_int.to_string ();
-            return converted_string;
+            return converted_int.to_string ();
         }
 
-        public async void execute_command_async (string[] spawn_args) {
+        public static async Subprocess? execute_command_async (string[] spawn_args) {
+            // start the SubprocessLauncher by passing STDOUT_PIPE as parameter, since STDOUT did not return the ffmpeg output when I tried
+            var launcher = new SubprocessLauncher (SubprocessFlags.STDOUT_PIPE);
             try {
-                // start the SubprocessLauncher by passing STDOUT_PIPE as parameter, since STDOUT did not return the ffmpeg output when I tried
-                var launcher = new SubprocessLauncher (SubprocessFlags.STDOUT_PIPE);
-        
                 // start the subprocess by executing the values ​​you set to run without terminal
-                subprocess = launcher.spawnv (spawn_args);
-        
+                var subprocess = launcher.spawnv (spawn_args);
                 // Create a variable with arguments returned from the subprocess.
                 var input_stream = subprocess.get_stdout_pipe ();
         
@@ -43,15 +38,14 @@ namespace Gifup {
         
                     // If the string is null, then the ffmpeg process has been terminated.
                     if (str_return == null) {
-                        break;
+                        return subprocess;
                     } else {
                        GLib.message (str_return);
                     }
                 }
             } catch (Error e) {
                 GLib.message("Erro %s", e.message);
+                return null;
             }
         }
-        
-    }
 }
