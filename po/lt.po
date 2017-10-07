@@ -1,5 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Moo, 2017.
+#
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-07 17:34+0300\n"
+"PO-Revision-Date: 2017-10-07 17:42+0300\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: Moo\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: lt\n"
+
+#: ../src/Window.vala:50
+msgid "Select a File!"
+msgstr "Pasirinkite failą!"
+
+#: ../src/Window.vala:69
+msgid "Basic Options"
+msgstr "Pagrindiniai"
+
+#: ../src/Window.vala:71
+msgid "Advanced Options"
+msgstr "Išplėstiniai"
+
+#: ../src/Window.vala:85
+msgid "Tip: Click enter after entering time for previews!"
+msgstr "Patarimas: Įvedę laiką, paspauskite Enter, kad pamatytumėte peržiūras!"
+
+#: ../src/Window.vala:92
+msgid "Make GIF!"
+msgstr "Sukurti GIF!"
+
+#: ../src/Window.vala:116
+msgid "Start Time (hh:mm:ss):"
+msgstr "Pradžios laikas (vv:mm:ss):"
+
+#: ../src/Window.vala:120
+msgid "End Time (hh:mm:ss):"
+msgstr "Pabaigos laikas (vv:mm:ss):"
+
+#: ../src/Window.vala:149
+msgid "Gif Height:"
+msgstr "Gif aukštis:"
+
+#: ../src/Window.vala:154
+msgid "Frames Per Seconds:"
+msgstr "Kadrų per sekundę:"
+
+#: ../src/Window.vala:168
+msgid "Status"
+msgstr "Būsena"
+
+#: ../src/Window.vala:174
+msgid "Open File"
+msgstr "Atverti failą"
+
+#: ../src/Window.vala:176
+msgid "_Cancel"
+msgstr "_Atsisakyti"
+
+#: ../src/Window.vala:177
+msgid "_Open"
+msgstr "A_tverti"
+
+#: ../src/Window.vala:194
+msgid "Gif is Up at %s!"
+msgstr "Gif sukurtas ties %s!"
+
+#: ../src/Window.vala:199
+msgid "Check if all fields have sane values and try again."
+msgstr "Patikrinkite ar visuose laukuose yra teisingos reikšmės ir bandykite dar kartą."
+
+#: ../src/Window.vala:219
+msgid "Is a file selected?"
+msgstr "Ar yra pasirinktas failas?"
