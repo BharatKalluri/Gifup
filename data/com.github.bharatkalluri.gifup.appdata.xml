@@ -27,15 +27,15 @@
         <image>https://raw.githubusercontent.com/BharatKalluri/Gifup/master/Screenshot.png</image>
     </screenshot>
   </screenshots>
-
-<release version="0.0.12" date="2017-11-13">
-    <description>
-        <ul>
-            <li>Improved Icons</li>
-        </ul>
-    </description>
-</release>
-
+<releases>
+        <release version="0.0.13" date="2017-11-13">
+            <description>
+                <ul>
+                    <li>Improved Icons</li>
+                </ul>
+            </description>
+        </release>
+</releases>
   <update_contact>kalluribharat@gmail.com</update_contact>
   <custom>
      <value key="x-appcenter-color-primary">#C64A89</value>
