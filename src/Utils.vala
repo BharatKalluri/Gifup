@@ -1,5 +1,5 @@
 namespace Gifup.Utils {
-        public static string duration_in_seconds (string duration) {
+        public static int duration_in_seconds (string duration) {
             string[] str = duration.split (".");
             string[] time = str[0].split (":");
             int hours = 0;
@@ -17,7 +17,7 @@ namespace Gifup.Utils {
             }
 
             var converted_int =  secs + (hours * 3600) + (mins * 60);
-            return converted_int.to_string ();
+            return converted_int;
         }
 
         public static async Subprocess? execute_command_async (string[] spawn_args) {

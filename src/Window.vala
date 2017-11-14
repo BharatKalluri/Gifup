@@ -44,7 +44,7 @@ namespace Gifup {
             grid.orientation = Gtk.Orientation.VERTICAL;
             grid.column_spacing = 6;
             grid.row_spacing = 12;
-            grid.hexpand = false;
+            grid.hexpand = true;
 
             //File Open button row 0
             file_button = new Gtk.Button.with_label (_("Select a File!"));
@@ -185,8 +185,9 @@ namespace Gifup {
         void gif_create () {
             var selected_path = GLib.Path.get_dirname (selected_file);
             var gifout_path = GLib.Path.build_filename (selected_path, "gifout.gif");
+            var difference = Utils.duration_in_seconds (entry_end.text) - Utils.duration_in_seconds (entry_start.text);
             //  create gif using the file selected and the timings given
-            string [] cmd = {"ffmpeg", "-ss", Utils.duration_in_seconds (entry_start.text), "-i", selected_file, "-to", Utils.duration_in_seconds (entry_end.text), "-r", entry_fps.text, "-vf", "scale=" + entry_height.text + ":-1", gifout_path, "-y"};
+            string [] cmd = {"ffmpeg", "-ss", Utils.duration_in_seconds (entry_start.text).to_string(), "-i", selected_file, "-to", difference.to_string(), "-r", entry_fps.text, "-vf", "scale=" + entry_height.text + ":-1", gifout_path, "-y"};
             Utils.execute_command_async.begin (cmd, (obj, async_res) => {
                 var subprocess = Utils.execute_command_async.end (async_res);
                 try {
@@ -204,7 +205,7 @@ namespace Gifup {
 
         void frame_picture (string frame_number, string file_name, Gtk.Image image_widget) {
             var path = GLib.Path.build_filename (GLib.Environment.get_tmp_dir (), file_name + ".bmp");
-            string [] cmd = {"ffmpeg", "-ss", Utils.duration_in_seconds (frame_number), "-i", selected_file, "-frames:v", "1", "-filter:v", "scale=150:-1", path, "-y"};
+            string [] cmd = {"ffmpeg", "-ss", Utils.duration_in_seconds (frame_number).to_string(), "-i", selected_file, "-frames:v", "1", "-filter:v", "scale=150:-1", path, "-y"};
             Utils.execute_command_async.begin (cmd, (obj, async_res) => {
                 var subprocess = Utils.execute_command_async.end (async_res);
                 try {
