@@ -12,8 +12,7 @@ namespace Gifup {
         private Gtk.SpinButton entry_height;
         private Gtk.SpinButton entry_fps;
         private Gtk.Button gif_button;
-        private Gtk.Button file_button;
-        private Gtk.FileChooserDialog? file_choooser;
+        private Gtk.FileChooserButton file_button;
         private Gtk.Image image_start;
         private Gtk.Image image_end;
         private Gtk.Spinner spinner;
@@ -47,18 +46,15 @@ namespace Gifup {
             grid.hexpand = true;
 
             //File Open button row 0
-            file_button = new Gtk.Button.with_label (_("Select a File!"));
+            file_button = new Gtk.FileChooserButton ("Open your favourite file", Gtk.FileChooserAction.OPEN);
             file_button.margin_top = 10;
             file_button.margin_start = 10;
             file_button.margin_end = 10;
             grid.add (file_button);
             // File open button events
-            file_button.clicked.connect (() => {
-                open_filechooser();
-                if (this.selected_file != null) {
-                    file_button.label = GLib.Path.get_basename (selected_file);
-                    gif_button.sensitive = true;
-                }
+            file_button.selection_changed.connect (() => {
+            	selected_file = file_button.get_uri().substring (7).replace ("%20"," ");
+            	gif_button.sensitive = true;
             });
 
             // A stack to row 1
@@ -170,18 +166,6 @@ namespace Gifup {
             dialog.destroy ();
         }
 
-        void open_filechooser () {
-            file_choooser = new FileChooserDialog (_("Open File"), this,
-                                    FileChooserAction.OPEN,
-                                    _("_Cancel"), ResponseType.CANCEL,
-                                    _("_Open"), ResponseType.ACCEPT);
-            if (file_choooser.run () == ResponseType.ACCEPT) {
-                selected_file = file_choooser.get_filename ();
-            }
-
-            file_choooser.destroy();
-        }
-
         void gif_create () {
             var selected_path = GLib.Path.get_dirname (selected_file);
             var gifout_path = GLib.Path.build_filename (selected_path, "gifout.gif");
@@ -194,7 +178,7 @@ namespace Gifup {
                     if (subprocess != null && subprocess.wait_check ()) {
                         create_dialog (_("Gif is Up at %s!").printf (selected_path));
                     }
-        
+
                 } catch (Error e) {
                     critical (e.message);
                     create_dialog (_("Check if all fields have sane values and try again."));
