@@ -35,6 +35,14 @@
                 </ul>
             </description>
         </release>
+	<release version="0.0.14" date="2017-11-14">
+            <description>
+                <ul>
+                    <li>Fixed a bug causing end time problems</li>
+		    <li>Switched to a native file chooser widget</li>
+                </ul>
+            </description>
+        </release>
 </releases>
   <update_contact>kalluribharat@gmail.com</update_contact>
   <custom>
