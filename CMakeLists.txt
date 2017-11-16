@@ -39,10 +39,10 @@ add_executable(${EXEC_NAME} ${VALA_C})
 
 install (TARGETS ${EXEC_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/com.github.bharatkalluri.gifup.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications/)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/32/com.github.bharatkalluri.gifup.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/icons/hicolor/32x32/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/48/com.github.bharatkalluri.gifup.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/icons/hicolor/48x48/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/64/com.github.bharatkalluri.gifup.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/icons/hicolor/64x64/apps)
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/128/com.github.bharatkalluri.gifup.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/icons/hicolor/128x128/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/32/com.github.bharatkalluri.gifup.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/32x32/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/48/com.github.bharatkalluri.gifup.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/48x48/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/64/com.github.bharatkalluri.gifup.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/64x64/apps)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/icons/128/com.github.bharatkalluri.gifup.svg DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/128x128/apps)
 
 install(
     CODE

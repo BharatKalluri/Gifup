@@ -43,6 +43,13 @@
                 </ul>
             </description>
         </release>
+	<release version="0.0.15" date="2017-11-16">
+            <description>
+                <ul>
+                    <li>Changed icon install location</li>
+                </ul>
+            </description>
+        </release>
 </releases>
   <update_contact>kalluribharat@gmail.com</update_contact>
   <custom>
