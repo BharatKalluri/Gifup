@@ -4,8 +4,8 @@ namespace Gifup {
     class GifupApp : Granite.Application {
         private Window window;
         construct {
-            //a full list of fields can be found at
-            //https://valadoc.org/granite/Granite.Application.html
+            // a full list of fields can be found at
+            // https://valadoc.org/granite/Granite.Application.html
             program_name = "Gifup";
             exec_name = "gifup";
             app_years = "2016";

@@ -12,6 +12,7 @@ namespace Gifup {
         private Gtk.SpinButton entry_width;
         private Gtk.SpinButton entry_fps;
         private Gtk.Button gif_button;
+        private Gtk.Button complete_gif;
         private Gtk.FileChooserButton file_button;
         private Gtk.Image image_start;
         private Gtk.Image image_end;
@@ -54,7 +55,8 @@ namespace Gifup {
             // File open button events
             file_button.selection_changed.connect (() => {
             	selected_file = file_button.get_uri().substring (7).replace ("%20"," ");
-            	gif_button.sensitive = true;
+                gif_button.sensitive = true;
+                complete_gif.sensitive = true;
             });
 
             // A stack to row 1
@@ -87,12 +89,26 @@ namespace Gifup {
             //  Button For making GIF at row 6 of grid_advance
             gif_button = new Gtk.Button.with_label (_("Make GIF!"));
             gif_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-            gif_button.margin = 12;
+            gif_button.margin_start = 12;
+            gif_button.margin_end = 12;
             gif_button.sensitive = false;
             grid.add (gif_button);
             // Event for gif create button
             gif_button.clicked.connect (() => {
                 gif_create();
+                spinner.active = true;
+            });
+
+            complete_gif = new Gtk.Button.with_label (_("Convert Complete Video"));
+            complete_gif.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            complete_gif.margin_start = 12;
+            complete_gif.margin_end = 12;
+            complete_gif.margin_bottom = 12;
+            complete_gif.sensitive = false;
+            grid.add (complete_gif);
+            // Event for complete gif create button
+            complete_gif.clicked.connect (() => {
+                complete_gif_create();
                 spinner.active = true;
             });
 
@@ -172,6 +188,26 @@ namespace Gifup {
             var difference = Utils.duration_in_seconds (entry_end.text) - Utils.duration_in_seconds (entry_start.text);
             //  create gif using the file selected and the timings given
             string [] cmd = {"ffmpeg", "-ss", Utils.duration_in_seconds (entry_start.text).to_string(), "-i", selected_file, "-to", difference.to_string(), "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":-1", gifout_path, "-y"};
+            Utils.execute_command_async.begin (cmd, (obj, async_res) => {
+                var subprocess = Utils.execute_command_async.end (async_res);
+                try {
+                    if (subprocess != null && subprocess.wait_check ()) {
+                        create_dialog (_("Gif is Up at %s!").printf (selected_path));
+                    }
+
+                } catch (Error e) {
+                    critical (e.message);
+                    create_dialog (_("Check if all fields have sane values and try again."));
+                }
+                this.spinner.active = false;
+            });
+        }
+
+        void complete_gif_create () {
+            var selected_path = GLib.Path.get_dirname (selected_file);
+            var gifout_path = GLib.Path.build_filename (selected_path, "gifout.gif");
+            //  create gif using the file selected and the timings given
+            string [] cmd = {"ffmpeg", "-i", selected_file, "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":-1", gifout_path, "-y"};
             Utils.execute_command_async.begin (cmd, (obj, async_res) => {
                 var subprocess = Utils.execute_command_async.end (async_res);
                 try {
