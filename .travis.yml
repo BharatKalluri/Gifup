@@ -15,7 +15,7 @@ addons:
     packages:
       - libstdc++-5-dev
       - cmake
-      - cmake-elementary
+      - elementary-sdk
       - libgtk-3-dev
       - libgranite-dev
       - valac
