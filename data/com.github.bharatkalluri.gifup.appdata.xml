@@ -12,6 +12,7 @@
       <li>Control start and end time of the GIF</li>
       <li>Watch live preview of the start and end frames</li>
       <li>Control frames per second and height of the gif</li>
+      <li>Convert complete video into a GIF</li>
     </ul>
   </description>
   <provides>
@@ -20,7 +21,7 @@
   <developer_name>Bharat Kalluri</developer_name>
   <url type="homepage">https://github.com/bharatkalluri/gifup</url>
   <url type="bugtracker">https://github.com/bharatkalluri/gifup/issues</url>
-  <url type="donation">email me :-)</url>
+  <url type="donation">Email me :-)</url>
   <url type="help">https://github.com/bharatkalluri/gifup/issues</url>
   <screenshots>
     <screenshot type="default">
@@ -47,6 +48,13 @@
             <description>
                 <ul>
                     <li>Changed icon install location</li>
+                </ul>
+            </description>
+        </release>
+    <release version="0.0.17" date="2018-04-27">
+            <description>
+                <ul>
+                    <li>Added Option to convert complete video into GIF!</li>
                 </ul>
             </description>
         </release>
