@@ -1,6 +1,6 @@
 using Gtk;
 
-namespace Gifup { 
+namespace Gifup {
     class GifupApp : Granite.Application {
         private Window window;
         construct {

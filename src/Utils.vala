@@ -1,4 +1,7 @@
-namespace Gifup.Utils {
+namespace Gifup {
+
+    class Utils: Window {
+
         public static int duration_in_seconds (string duration) {
             string[] str = duration.split (".");
             string[] time = str[0].split (":");
@@ -48,4 +51,7 @@ namespace Gifup.Utils {
                 return null;
             }
         }
+
+
+    }
 }

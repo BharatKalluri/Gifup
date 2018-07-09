@@ -1,0 +1,5 @@
+src/Application.vala
+src/Utils.vala
+src/Window.vala
+data/com.github.bharatkalluri.gifup.desktop.in
+data/com.github.bharatkalluri.gifup.appdata.xml.in
