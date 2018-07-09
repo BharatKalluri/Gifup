@@ -3,7 +3,7 @@ using Gtk;
 namespace Gifup {
     class GifupApp : Gtk.Application {
         private Window window;
-        public GifupApp (){
+        public GifupApp () {
             Object (
                 application_id: "com.github.bharatkalluri.gifup",
                 flags: ApplicationFlags.FLAGS_NONE
