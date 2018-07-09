@@ -13,6 +13,8 @@ executable(
     'src/Gifup.vala',
     'src/Utils.vala',
     'src/Window.vala',
+    'src/Widgets/AdvanceOptions.vala',
+    'src/Widgets/BasicOptions.vala',
     dependencies: [
         dependency('gtk+-3.0'),
         dependency('granite'),
