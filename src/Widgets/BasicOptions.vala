@@ -6,7 +6,7 @@ namespace Gifup {
         private Gtk.Entry entry_end;
         private Gtk.Image image_start;
         private Gtk.Image image_end;
-        public BasicOptions (string selected_file) {
+        public BasicOptions (string? selected_file) {
                 //Grid properties
                 column_spacing = 12;
                 row_spacing = 6;
