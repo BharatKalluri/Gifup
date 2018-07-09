@@ -4,11 +4,9 @@ namespace Gifup {
     class Window : Gtk.Window {
         // Init all UI elements
         private Gtk.Grid grid;
-        public Gtk.Entry entry_start;
-        public Gtk.Entry entry_end;
+        private AdvanceOptions grid_advance;
+        private BasicOptions grid_basic;
 
-        public Gtk.SpinButton entry_width;
-        public Gtk.SpinButton entry_fps;
         public Gtk.Button gif_button;
         public Gtk.Button complete_gif;
         public Gtk.FileChooserButton file_button;
@@ -50,7 +48,8 @@ namespace Gifup {
             grid.add (file_button);
             // File open button events
             file_button.selection_changed.connect (() => {
-            	selected_file = file_button.get_uri().substring (7).replace ("%20"," ");
+                selected_file = file_button.get_uri().substring (7).replace ("%20"," ");
+                grid_basic.selected_file = selected_file;
                 gif_button.sensitive = true;
                 complete_gif.sensitive = true;
             });
@@ -59,9 +58,9 @@ namespace Gifup {
             var stack = new Stack ();
             stack.set_transition_type (Gtk.StackTransitionType.SLIDE_LEFT_RIGHT);
 
-            var grid_basic = new BasicOptions (selected_file);
+            grid_basic = new BasicOptions ();
             stack.add_titled (grid_basic, "Basic", _("Basic Options"));
-            var grid_advance = new AdvanceOptions ();
+            grid_advance = new AdvanceOptions ();
             stack.add_titled (grid_advance, "Advanced", _("Advanced Options"));
 
             Gtk.StackSwitcher stack_switcher = new Gtk.StackSwitcher ();
@@ -91,7 +90,7 @@ namespace Gifup {
             grid.add (gif_button);
             // Event for gif create button
             gif_button.clicked.connect (() => {
-                Gifup.Utils.gif_create(selected_file, entry_end, entry_start, entry_fps, entry_width, spinner);
+                Gifup.Utils.gif_create(selected_file, grid_basic.entry_end, grid_basic.entry_start, grid_advance.entry_fps, grid_advance.entry_width, spinner);
                 spinner.active = true;
             });
 
@@ -104,7 +103,7 @@ namespace Gifup {
             grid.add (complete_gif);
             // Event for complete gif create button
             complete_gif.clicked.connect (() => {
-                Gifup.Utils.complete_gif_create (selected_file, entry_fps, entry_width, spinner);
+                Gifup.Utils.complete_gif_create (selected_file, grid_advance.entry_fps, grid_advance.entry_width, spinner);
                 spinner.active = true;
             });
 

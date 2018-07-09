@@ -2,11 +2,12 @@ using Gtk;
 
 namespace Gifup {
     public class BasicOptions : Gtk.Grid {
-        private Gtk.Entry entry_start;
-        private Gtk.Entry entry_end;
+        public Gtk.Entry entry_start;
+        public Gtk.Entry entry_end;
         private Gtk.Image image_start;
         private Gtk.Image image_end;
-        public BasicOptions (string? selected_file) {
+        public string selected_file;
+        public BasicOptions () {
                 //Grid properties
                 column_spacing = 12;
                 row_spacing = 6;
