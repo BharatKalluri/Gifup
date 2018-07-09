@@ -2,8 +2,8 @@ using Gtk;
 
 namespace Gifup {
     public class AdvanceOptions : Gtk.Grid {
-        Gtk.SpinButton entry_width;
-        Gtk.SpinButton entry_fps;
+        public Gtk.SpinButton entry_width;
+        public Gtk.SpinButton entry_fps;
         public AdvanceOptions () {
             // Advance Options start
             column_spacing = 12;
