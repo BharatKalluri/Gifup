@@ -2,17 +2,20 @@ using Gtk;
 
 namespace Gifup {
     public class BasicOptions : Gtk.Grid {
+
         public Gtk.Entry entry_start;
         public Gtk.Entry entry_end;
         private Gtk.Image image_start;
         private Gtk.Image image_end;
         public string selected_file;
         public BasicOptions () {
+
                 //Grid properties
                 column_spacing = 12;
                 row_spacing = 6;
                 margin_start = 12;
                 margin_end = 12;
+
                 //  Start Time at row 1 of grid_basic
                 entry_start = new Gtk.Entry ();
                 attach (Gifup.Utils.create_left_label (_("Start Time (hh:mm:ss):")), 0, 1, 1, 1);
@@ -28,6 +31,7 @@ namespace Gifup {
                 // End Image from row 3 of grid_basic
                 image_end = new Image ();
                 attach(image_end, 1, 3, 1, 1);
+
                 // Basic Options end
                 entry_start.activate.connect ( () => {
                     Gifup.Utils.frame_picture (selected_file, entry_start.text, "gifup_start", image_start);

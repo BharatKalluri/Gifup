@@ -1,10 +1,12 @@
+using Gst;
+
 namespace Gifup.Utils {
 
-    public void complete_gif_create (string selected_file, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
+    public void complete_gif_create (string selected_file, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_height, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
         var selected_path = GLib.Path.get_dirname (selected_file);
         var gifout_path = GLib.Path.build_filename (selected_path, "gifout.gif");
         //  create gif using the entire file selected
-        string [] cmd = {"ffmpeg", "-i", selected_file, "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":-1", gifout_path, "-y"};
+        string [] cmd = {"ffmpeg", "-i", selected_file, "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":" + entry_height.text , gifout_path, "-y"};
         execute_command_async.begin (cmd, (obj, async_res) => {
             var subprocess = Utils.execute_command_async.end (async_res);
             try {
@@ -103,12 +105,12 @@ namespace Gifup.Utils {
             });
     }
 
-    public void gif_create (string selected_file, Gtk.Entry entry_end, Gtk.Entry entry_start, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
+    public void gif_create (string selected_file, Gtk.Entry entry_end, Gtk.Entry entry_start, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_height, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
             var selected_path = GLib.Path.get_dirname (selected_file);
             var gifout_path = GLib.Path.build_filename (selected_path, "gifout.gif");
             int difference = Utils.duration_in_seconds (entry_end.text) - Utils.duration_in_seconds (entry_start.text);
             //  create gif using the file selected and the timings given
-            string [] cmd = {"ffmpeg", "-ss", duration_in_seconds (entry_start.text).to_string(), "-i", selected_file, "-to", difference.to_string(), "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":-1", gifout_path, "-y"};
+            string [] cmd = {"ffmpeg", "-ss", duration_in_seconds (entry_start.text).to_string(), "-i", selected_file, "-to", difference.to_string(), "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":" + entry_height.text, gifout_path, "-y"};
             Utils.execute_command_async.begin (cmd, (obj, async_res) => {
                 var subprocess = Utils.execute_command_async.end (async_res);
                 try {

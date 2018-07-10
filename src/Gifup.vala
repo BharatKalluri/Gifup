@@ -15,6 +15,7 @@ namespace Gifup {
         }
 
         public static int main (string [] args) {
+            Gst.init (ref args);
             var app = new GifupApp ();
             return app.run (args);
         }
