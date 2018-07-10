@@ -17,8 +17,6 @@ executable(
     'src/Widgets/BasicOptions.vala',
     dependencies: [
         dependency('gtk+-3.0'),
-        dependency('granite'),
-        dependency('gstreamer-1.0'),
     ],
     install: true
 )

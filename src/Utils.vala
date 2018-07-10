@@ -1,5 +1,3 @@
-using Gst;
-
 namespace Gifup.Utils {
 
     public void complete_gif_create (string selected_file, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_height, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
