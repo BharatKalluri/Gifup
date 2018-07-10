@@ -35,6 +35,13 @@
                 </ul>
             </description>
     </release>
+  <release version="0.0.18" date="2018-07-10">
+            <description>
+                <ul>
+                    <li>Lot of code refactoring, support for height and flatpak support!</li>
+                </ul>
+            </description>
+    </release>
 </releases>
   <update_contact>kalluribharat@gmail.com</update_contact>
   <custom>
