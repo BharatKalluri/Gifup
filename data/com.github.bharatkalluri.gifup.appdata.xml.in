@@ -29,35 +29,13 @@
     </screenshot>
   </screenshots>
 <releases>
-        <release version="0.0.13" date="2017-11-13">
-            <description>
-                <ul>
-                    <li>Improved Icons</li>
-                </ul>
-            </description>
-        </release>
-	<release version="0.0.14" date="2017-11-14">
-            <description>
-                <ul>
-                    <li>Fixed a bug causing end time problems</li>
-		    <li>Switched to a native file chooser widget</li>
-                </ul>
-            </description>
-        </release>
-	<release version="0.0.15" date="2017-11-16">
-            <description>
-                <ul>
-                    <li>Changed icon install location</li>
-                </ul>
-            </description>
-        </release>
     <release version="0.0.17" date="2018-04-27">
             <description>
                 <ul>
                     <li>Added Option to convert complete video into GIF!</li>
                 </ul>
             </description>
-        </release>
+    </release>
 </releases>
   <update_contact>kalluribharat@gmail.com</update_contact>
   <custom>
