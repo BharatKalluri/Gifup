@@ -18,26 +18,14 @@
 
 ### Installation
 
-App under Heavy development!
-
-### Get it:
-Install the elementary OS SDK
-
+#### From source
 ```
-sudo apt install elementary-sdk
-```
-
-clone the repository
-```
-git clone https://github.com/Bharatkalluri/Gifup.git
+git clone https://github.com/BharatKalluri/Gifup
 cd Gifup
+meson builddir --prefix=/usr
+ninja
+ninja install
 ```
 
-build the project
-
-```
-mkdir build && cd build
-cmake -DCMAKE_INSTALL_PREFIX=/usr ../
-make
-sudo make install
-```
+#### Flatpak
+A Flaptak json is already present in the repo. It will be uploaded to flathub shortly.
