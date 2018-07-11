@@ -15,6 +15,7 @@ executable(
     'src/Window.vala',
     'src/Widgets/AdvanceOptions.vala',
     'src/Widgets/BasicOptions.vala',
+    'src/Widgets/TimePicker.vala',
     dependencies: [
         dependency('gtk+-3.0'),
     ],

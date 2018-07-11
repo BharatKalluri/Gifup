@@ -3,8 +3,8 @@ using Gtk;
 namespace Gifup {
     public class BasicOptions : Gtk.Grid {
 
-        public Gtk.Entry entry_start;
-        public Gtk.Entry entry_end;
+        public Gifup.TimePicker entry_start;
+        public Gifup.TimePicker entry_end;
         private Gtk.Image image_start;
         private Gtk.Image image_end;
         public string selected_file;
@@ -17,27 +17,27 @@ namespace Gifup {
                 margin_end = 12;
 
                 //  Start Time at row 1 of grid_basic
-                entry_start = new Gtk.Entry ();
-                attach (Gifup.Utils.create_left_label (_("Start Time (hh:mm:ss):")), 0, 1, 1, 1);
+                entry_start = new Gifup.TimePicker ();
+                attach (Gifup.Utils.create_left_label (_("Start Time :")), 0, 1, 1, 1);
                 attach (entry_start, 1, 1, 1, 1);
                 //  End time at row 2 of grid_basic
-                entry_end = new Gtk.Entry ();
-                attach (Gifup.Utils.create_left_label (_("End Time (hh:mm:ss):")), 0, 2, 1, 1);
-                attach (entry_end, 1, 2, 1, 1);
+                entry_end = new Gifup.TimePicker ();
+                attach (Gifup.Utils.create_left_label (_("End Time :")), 2, 1, 1, 1);
+                attach (entry_end, 3, 1, 1, 1);
 
                 // Start Image from row 3 of grid_basic
                 image_start = new Image ();
-                attach(image_start, 0, 3, 1, 1);
+                attach(image_start, 0, 2, 2, 1);
                 // End Image from row 3 of grid_basic
                 image_end = new Image ();
-                attach(image_end, 1, 3, 1, 1);
+                attach(image_end, 2, 2, 2, 1);
 
                 // Basic Options end
-                entry_start.activate.connect ( () => {
-                    Gifup.Utils.frame_picture (selected_file, entry_start.text, "gifup_start", image_start);
+                entry_start.value_changed.connect ( (frame_number) => {
+                    Gifup.Utils.frame_picture (selected_file, frame_number, "gifup_start", image_start);
                 });
-                entry_end.activate.connect ( () => {
-                    Gifup.Utils.frame_picture (selected_file, entry_end.text, "gifup_end", image_end);
+                entry_end.value_changed.connect ( (frame_number) => {
+                    Gifup.Utils.frame_picture (selected_file, frame_number, "gifup_end", image_end);
                 });
         }
     }

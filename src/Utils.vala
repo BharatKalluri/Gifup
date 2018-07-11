@@ -19,11 +19,11 @@ namespace Gifup.Utils {
             });
     }
 
-    public void gif_create (string selected_file, Gtk.Entry entry_end, Gtk.Entry entry_start, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_height, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
+    public void gif_create (string selected_file, Gifup.TimePicker entry_end, Gifup.TimePicker entry_start, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_height, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
             var gifout_path = GLib.Path.build_filename (Environment.get_home_dir (),"Downloads", "gifout.gif");
-            int difference = Utils.duration_in_seconds (entry_end.text) - Utils.duration_in_seconds (entry_start.text);
+            string difference =  (entry_end.duration_in_sec() - entry_start.duration_in_sec()).to_string();
             //  create gif using the file selected and the timings given
-            string [] cmd = {"ffmpeg", "-ss", duration_in_seconds (entry_start.text).to_string(), "-i", selected_file, "-to", difference.to_string(), "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":" + entry_height.text, gifout_path, "-y"};
+            string [] cmd = {"ffmpeg", "-ss", entry_start.duration_in_sec().to_string(), "-i", selected_file, "-to", difference, "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":" + entry_height.text, gifout_path, "-y"};
             Utils.execute_command_async.begin (cmd, (obj, async_res) => {
                 var subprocess = Utils.execute_command_async.end (async_res);
                 try {
@@ -103,9 +103,9 @@ namespace Gifup.Utils {
         }
     }
 
-    void frame_picture (string selected_file, string frame_number, string file_name, Gtk.Image image_widget) {
+    void frame_picture (string selected_file, int frame_number, string file_name, Gtk.Image image_widget) {
             var path = GLib.Path.build_filename (GLib.Environment.get_tmp_dir (), file_name + ".bmp");
-            string [] cmd = {"ffmpeg","-hide_banner","-loglevel", "debug", "-ss", Utils.duration_in_seconds (frame_number).to_string(), "-i", selected_file, "-frames:v", "1", "-filter:v", "scale=150:-1", path, "-y"};
+            string [] cmd = {"ffmpeg","-hide_banner","-loglevel", "debug", "-ss", frame_number.to_string(), "-i", selected_file, "-frames:v", "1", "-filter:v", "scale=150:-1", path, "-y"};
             Utils.execute_command_async.begin (cmd, (obj, async_res) => {
                 var subprocess = Utils.execute_command_async.end (async_res);
                 try {

@@ -14,7 +14,7 @@ namespace Gifup {
 
         public string selected_file;
         public Window () {
-            Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = true;
+            // Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = true;
             this.resizable = false;
             this.window_position = Gtk.WindowPosition.CENTER;
 
@@ -73,13 +73,6 @@ namespace Gifup {
             // A spinner to indicate program is working
             spinner = new Gtk.Spinner ();
             grid.add (spinner);
-
-            // A tip saying hit enter for frame preview
-            var tip_label = Gifup.Utils.create_left_label (_("Tip: Click enter after entering time for previews!"));
-            tip_label.margin_start = 6;
-            tip_label.margin_end = 6;
-            tip_label.xalign = 0.5f;
-            grid.add (tip_label);
 
             //  Button For making GIF at row 6 of grid_advance
             gif_button = new Gtk.Button.with_label (_("Make GIF!"));
