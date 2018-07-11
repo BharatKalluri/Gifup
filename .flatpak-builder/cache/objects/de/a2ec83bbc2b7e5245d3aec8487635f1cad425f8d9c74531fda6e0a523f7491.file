@@ -1,0 +1,4 @@
+[Application]
+name=com.github.bharatkalluri.gifup
+runtime=org.gnome.Platform/x86_64/3.28
+sdk=org.gnome.Sdk/x86_64/3.28
