@@ -14,7 +14,7 @@ namespace Gifup {
 
         public string selected_file;
         public Window () {
-            Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = true;
+            // Gtk.Settings.get_default().gtk_application_prefer_dark_theme = true;
             this.resizable = false;
             this.window_position = Gtk.WindowPosition.CENTER;
 
