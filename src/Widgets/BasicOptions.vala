@@ -27,10 +27,10 @@ namespace Gifup {
 
                 // Start Image from row 3 of grid_basic
                 image_start = new Image ();
-                attach(image_start, 0, 2, 2, 1);
+                attach(image_start, 0, 2, 2, 2);
                 // End Image from row 3 of grid_basic
                 image_end = new Image ();
-                attach(image_end, 2, 2, 2, 1);
+                attach(image_end, 2, 2, 2, 2);
 
                 // Basic Options end
                 entry_start.value_changed.connect ( (frame_number) => {
