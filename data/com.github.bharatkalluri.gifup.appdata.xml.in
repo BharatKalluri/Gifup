@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-  <id>com.github.bharatkalluri.gifup.desktop</id>
+  <id>com.github.bharatkalluri.gifup</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Gifup</name>
@@ -40,4 +40,5 @@
   <custom>
      <value key="x-appcenter-color-primary">#C64A89</value>
   </custom>
+  <content_rating type="oars-1.1" />
 </component>
