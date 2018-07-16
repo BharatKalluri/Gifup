@@ -28,10 +28,10 @@
     </screenshot>
   </screenshots>
 <releases>
-  <release version="0.0.19" date="2018-07-15">
+  <release version="0.0.20" date="2018-07-16">
             <description>
                 <ul>
-                    <li>UI Revamp!</li>
+                    <li>UI Revamp, more changes coming!</li>
                 </ul>
             </description>
     </release>
