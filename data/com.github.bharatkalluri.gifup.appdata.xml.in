@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-  <id>com.github.bharatkalluri.gifup</id>
+  <id>com.github.bharatkalluri.gifup.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Gifup</name>
@@ -28,10 +28,10 @@
     </screenshot>
   </screenshots>
 <releases>
-  <release version="0.0.20" date="2018-07-16">
+  <release version="0.0.21" date="2018-07-18">
             <description>
                 <ul>
-                    <li>UI Revamp, more changes coming!</li>
+                    <li>UI Revamp, Changed screenshot!</li>
                 </ul>
             </description>
     </release>
