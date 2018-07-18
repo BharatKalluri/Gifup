@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="https://github.com/BharatKalluri/Gifup/blob/master/data/icons/128/com.github.bharatkalluri.gifup.svg" alt="icon"> <br>
+</p>
+
 <div>
   <h1 align="center">Gifup</h1>
   <h3 align="center">Create GIFs from video files, written for the elementary OS.</h3>
