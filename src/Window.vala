@@ -65,6 +65,7 @@ namespace Gifup {
 
             Gtk.StackSwitcher stack_switcher = new Gtk.StackSwitcher ();
             stack_switcher.halign = Gtk.Align.CENTER;
+            stack_switcher.homogeneous = true;
             stack_switcher.set_stack (stack);
 
             grid.add (stack_switcher);
