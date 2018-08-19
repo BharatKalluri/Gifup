@@ -48,7 +48,7 @@ namespace Gifup {
             grid.add (file_button);
             // File open button events
             file_button.selection_changed.connect (() => {
-                selected_file = file_button.get_uri().replace ("%20"," ");
+                selected_file = file_button.get_uri().split(":")[1].replace ("%20", " ");
                 grid_basic.selected_file = selected_file;
                 gif_button.sensitive = true;
                 complete_gif.sensitive = true;
