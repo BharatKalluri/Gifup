@@ -1,4 +1,142 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-26 04:25-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"Language-Team: \n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: src/Utils.vala:11 src/Utils.vala:31
+#, c-format
+msgid "Gif is Up at %s!"
+msgstr "Trobareu el GIF a %s."
+
+#: src/Utils.vala:16 src/Utils.vala:36
+msgid "Check if all fields have sane values and try again."
+msgstr "Comproveu que tots els camps tinguin valors adecuats i torneu-ho a intentar."
+
+#: src/Utils.vala:44
+msgid "Status"
+msgstr "Estat:"
+
+#: src/Utils.vala:121
+msgid "Is a file selected?"
+msgstr "Heu seleccionat un fitxer?"
+
+#: src/Window.vala:62
+msgid "Basic Options"
+msgstr "Opcions bàsiques"
+
+#: src/Window.vala:64
+msgid "Advanced Options"
+msgstr "Opcions avançades"
+
+#: src/Window.vala:79
+msgid "Make GIF!"
+msgstr "Crea el GIF"
+
+#: src/Window.vala:91
+msgid "Convert Complete Video"
+msgstr "Converteix el vídeo sencer"
+
+#: src/Widgets/AdvanceOptions.vala:22
+msgid "Gif height:"
+msgstr "Alçada del GIF:"
+
+#: src/Widgets/AdvanceOptions.vala:29
+msgid "Gif width:"
+msgstr "Amplada del GIF:"
+
+#: src/Widgets/AdvanceOptions.vala:35
+msgid "Frames Per Seconds:"
+msgstr "Fotogrames per segon:"
+
+#: src/Widgets/BasicOptions.vala:21
+msgid "Start Time :"
+msgstr "Inici:"
+
+#: src/Widgets/BasicOptions.vala:25
+msgid "End Time :"
+msgstr "Acabament:"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:3
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:6
+msgid "Gifup"
+msgstr "Gifup"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:4
+msgid "Create GIFs in Linux"
+msgstr "Creeu GIF al Linux"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:6
+msgid "Create GIFs from Videos!"
+msgstr "Creeu GIF a partir de vídeos!"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:10
+msgid "com.github.bharatkalluri.gifup"
+msgstr "com.github.bharatkalluri.gifup"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:15
+msgid "gif;"
+msgstr "gif;"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:20
+msgid "About Gifup"
+msgstr "Quant al Gifup"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:7
+msgid "Create GIFs from Videos quickly!"
+msgstr "Creeu GIF a partir de vídeos amb rapidesa"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:9
+msgid "Gifup is a simple and effective way to create GIFs from video files."
+msgstr "El Gifup és una eina senzilla i eficaç per a crear GIF a partir de fitxers de vídeo."
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:10
+msgid "Features:"
+msgstr "Funcionalitats:"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:12
+msgid "Control start and end time of the GIF"
+msgstr "Controla el temps d’inici i acabament del GIF"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:13
+msgid "Watch live preview of the start and end frames"
+msgstr "Mostra una previsualització en directe dels fotogrames inicial i final"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:14
+msgid "Control frames per second and height of the gif"
+msgstr "Controla els fotogrames per segon i l’alçada del GIF"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:15
+msgid "Convert complete video into a GIF"
+msgstr "Converteix un vídeo sencer en un GIF"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:21
+msgid "Bharat Kalluri"
+msgstr "Bharat Kalluri"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:34
+msgid "UI Revamp, Changed screenshot!"
+msgstr "Modernització de la IU; canvi de captura de pantalla"
+
+#~ msgid "Select a File!"
+#~ msgstr "Seleccioneu un fitxer."
+
+#~ msgid "Tip: Click enter after entering time for previews!"
+#~ msgstr "Consell: premeu Retorn després d’introduir el temps per a una previsualització."
+
+#~ msgid "Open File"
+#~ msgstr "Obre un fitxer"
+
+#~ msgid "_Cancel"
+#~ msgstr "_Cancel·la"
+
+#~ msgid "_Open"
+#~ msgstr "_Obre"
