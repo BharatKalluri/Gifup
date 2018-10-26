@@ -1,5 +1,8 @@
-src/Application.vala
+src/Gifup.vala
 src/Utils.vala
 src/Window.vala
+src/Widgets/AdvanceOptions.vala
+src/Widgets/BasicOptions.vala
+src/Widgets/TimePicker.vala
 data/com.github.bharatkalluri.gifup.desktop.in
 data/com.github.bharatkalluri.gifup.appdata.xml.in
