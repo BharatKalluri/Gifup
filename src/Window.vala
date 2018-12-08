@@ -1,6 +1,6 @@
 using Gtk;
 
-namespace Gifup { 
+namespace Gifup {
     class Window : Gtk.Window {
         // Init all UI elements
         private Gtk.Grid grid;
@@ -29,7 +29,7 @@ namespace Gifup {
 
             this.destroy.connect ( Gtk.main_quit );
             show_all();
-            
+
             Gtk.main ();
         }
 
@@ -48,10 +48,12 @@ namespace Gifup {
             grid.add (file_button);
             // File open button events
             file_button.selection_changed.connect (() => {
-                selected_file = file_button.get_uri().split(":")[1].replace ("%20", " ");
+                //selected_file = file_button.get_uri().split(":")[1].replace ("%20", " ");
+                selected_file = file_button.get_filename();
                 grid_basic.selected_file = selected_file;
                 gif_button.sensitive = true;
                 complete_gif.sensitive = true;
+                stdout.printf(selected_file);
             });
 
             // A stack to row 1
