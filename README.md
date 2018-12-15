@@ -27,8 +27,9 @@
 git clone https://github.com/BharatKalluri/Gifup
 cd Gifup
 meson builddir --prefix=/usr
+cd builddir
 ninja
-ninja install
+sudo ninja install
 ```
 
 #### Flatpak

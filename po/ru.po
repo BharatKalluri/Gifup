@@ -16,8 +16,12 @@ msgstr ""
 
 #: src/Utils.vala:11 src/Utils.vala:31
 #, c-format
-msgid "Gif is Up at %s!"
-msgstr "Gif сохранён как %s!"
+msgid ""
+"Gif is Up at:\n"
+" %s!"
+msgstr ""
+"Gif сохранён как:\n"
+" %s!"
 
 #: src/Utils.vala:16 src/Utils.vala:36
 msgid "Check if all fields have sane values and try again."
@@ -30,6 +34,14 @@ msgstr "Статус"
 #: src/Utils.vala:121
 msgid "Is a file selected?"
 msgstr "Файл выбран?"
+
+#: src/Window.vala:54
+msgid "Select video:"
+msgstr "Выбор видео:"
+
+#: src/Window.vala:70
+msgid "Select save directory:"
+msgstr "Выбор папки сохранения:"
 
 #: src/Window.vala:62
 msgid "Basic Options"
@@ -98,8 +110,7 @@ msgstr "Быстрое создание Gif-файлов из видео!"
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:9
 msgid "Gifup is a simple and effective way to create GIFs from video files."
-msgstr ""
-"Gifup это простой и эффективный способ создания Gif-файлов из видео."
+msgstr "Gifup это простой и эффективный способ создания Gif-файлов из видео."
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:10
 msgid "Features:"
