@@ -24,7 +24,7 @@
 
 #### From source
 ```
-git clone https://github.com/BharatKalluri/Gifup
+git clone https://github.com/camellan/Gifup
 cd Gifup
 meson builddir --prefix=/usr
 cd builddir
