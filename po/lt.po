@@ -1,42 +1,39 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# Moo, 2017.
+# Lithuanian translations for com.github.bharatkalluri.gifup package.
+# Copyright (C) 2019 THE com.github.bharatkalluri.gifup'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.bharatkalluri.gifup package.
+# Automatically generated, 2019.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: com.github.bharatkalluri.gifup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-24 13:54+0100\n"
-"PO-Revision-Date: 2017-10-07 17:42+0300\n"
-"Last-Translator: Moo\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-03-24 14:09+0100\n"
+"PO-Revision-Date: 2019-03-24 14:09+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: src/Utils.vala:11 src/Utils.vala:31
 #, c-format
 msgid "Gif is Up at %s!"
-msgstr "Gif sukurtas ties %s!"
+msgstr ""
 
 #: src/Utils.vala:16 src/Utils.vala:36
 msgid "Check if all fields have sane values and try again."
 msgstr ""
-"Patikrinkite ar visuose laukuose yra teisingos reikšmės ir bandykite dar "
-"kartą."
 
 #: src/Utils.vala:44
 msgid "Status"
-msgstr "Būsena"
+msgstr ""
 
 #: src/Utils.vala:121
 msgid "Is a file selected?"
-msgstr "Ar yra pasirinktas failas?"
+msgstr ""
 
 #: src/Window.vala:23
 msgid "Gifup"
@@ -48,56 +45,36 @@ msgstr ""
 
 #: src/Window.vala:62
 msgid "Basic Options"
-msgstr "Pagrindiniai"
+msgstr ""
 
 #: src/Window.vala:64
 msgid "Advanced Options"
-msgstr "Išplėstiniai"
+msgstr ""
 
 #: src/Window.vala:79
 msgid "Make GIF!"
-msgstr "Sukurti GIF!"
+msgstr ""
 
 #: src/Window.vala:91
 msgid "Convert Complete Video"
 msgstr ""
 
 #: src/Widgets/AdvanceOptions.vala:22
-#, fuzzy
 msgid "Gif height:"
-msgstr "Gif aukštis:"
+msgstr ""
 
 #: src/Widgets/AdvanceOptions.vala:29
-#, fuzzy
 msgid "Gif width:"
-msgstr "Gif aukštis:"
+msgstr ""
 
 #: src/Widgets/AdvanceOptions.vala:35
 msgid "Frames Per Seconds:"
-msgstr "Kadrų per sekundę:"
+msgstr ""
 
 #: src/Widgets/BasicOptions.vala:21
-#, fuzzy
 msgid "Start Time :"
-msgstr "Pradžios laikas (vv:mm:ss):"
+msgstr ""
 
 #: src/Widgets/BasicOptions.vala:25
-#, fuzzy
 msgid "End Time :"
-msgstr "Pabaigos laikas (vv:mm:ss):"
-
-#~ msgid "Select a File!"
-#~ msgstr "Pasirinkite failą!"
-
-#~ msgid "Tip: Click enter after entering time for previews!"
-#~ msgstr ""
-#~ "Patarimas: Įvedę laiką, paspauskite Enter, kad pamatytumėte peržiūras!"
-
-#~ msgid "Open File"
-#~ msgstr "Atverti failą"
-
-#~ msgid "_Cancel"
-#~ msgstr "_Atsisakyti"
-
-#~ msgid "_Open"
-#~ msgstr "A_tverti"
+msgstr ""

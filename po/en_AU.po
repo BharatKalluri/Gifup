@@ -1,67 +1,79 @@
+# English translations for com.github.bharatkalluri.gifup package.
+# Copyright (C) 2019 THE com.github.bharatkalluri.gifup'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.bharatkalluri.gifup package.
+# Automatically generated, 2019.
+#
 msgid ""
 msgstr ""
+"Project-Id-Version: com.github.bharatkalluri.gifup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-24 13:54+0100\n"
+"POT-Creation-Date: 2019-03-24 14:09+0100\n"
+"PO-Revision-Date: 2019-03-24 14:09+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en_AU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/Utils.vala:11 src/Utils.vala:31
 #, c-format
 msgid "Gif is Up at %s!"
-msgstr ""
+msgstr "Gif is Up at %s!"
 
 #: src/Utils.vala:16 src/Utils.vala:36
 msgid "Check if all fields have sane values and try again."
-msgstr ""
+msgstr "Check if all fields have sane values and try again."
 
 #: src/Utils.vala:44
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: src/Utils.vala:121
 msgid "Is a file selected?"
-msgstr ""
+msgstr "Is a file selected?"
 
 #: src/Window.vala:23
 msgid "Gifup"
-msgstr ""
+msgstr "Gifup"
 
 #: src/Window.vala:44
 msgid "Open your favourite file"
-msgstr ""
+msgstr "Open your favourite file"
 
 #: src/Window.vala:62
 msgid "Basic Options"
-msgstr ""
+msgstr "Basic Options"
 
 #: src/Window.vala:64
 msgid "Advanced Options"
-msgstr ""
+msgstr "Advanced Options"
 
 #: src/Window.vala:79
 msgid "Make GIF!"
-msgstr ""
+msgstr "Make GIF!"
 
 #: src/Window.vala:91
 msgid "Convert Complete Video"
-msgstr ""
+msgstr "Convert Complete Video"
 
 #: src/Widgets/AdvanceOptions.vala:22
 msgid "Gif height:"
-msgstr ""
+msgstr "Gif height:"
 
 #: src/Widgets/AdvanceOptions.vala:29
 msgid "Gif width:"
-msgstr ""
+msgstr "Gif width:"
 
 #: src/Widgets/AdvanceOptions.vala:35
 msgid "Frames Per Seconds:"
-msgstr ""
+msgstr "Frames Per Seconds:"
 
 #: src/Widgets/BasicOptions.vala:21
 msgid "Start Time :"
-msgstr ""
+msgstr "Start Time :"
 
 #: src/Widgets/BasicOptions.vala:25
 msgid "End Time :"
-msgstr ""
+msgstr "End Time :"
