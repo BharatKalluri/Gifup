@@ -72,8 +72,8 @@ msgstr "Images par seconde :"
 
 #: src/Widgets/BasicOptions.vala:21
 msgid "Start Time :"
-msgstr "Temps de ébut :"
+msgstr "Début :"
 
 #: src/Widgets/BasicOptions.vala:25
 msgid "End Time :"
-msgstr "Temps de fin :"
+msgstr "Fin :"
