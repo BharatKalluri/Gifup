@@ -1,7 +1,7 @@
 # French translations for com.github.bharatkalluri.gifup package.
 # Copyright (C) 2019 THE com.github.bharatkalluri.gifup'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.bharatkalluri.gifup package.
-# Automatically generated, 2019.
+# NathanBnm, 2019.
 #
 msgid ""
 msgstr ""
@@ -9,8 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-24 14:09+0100\n"
 "PO-Revision-Date: 2019-03-24 14:09+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Last-Translator: NathanBnm\n"
+"Language-Team: Français\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +28,7 @@ msgstr "Vérifiez si tous les champs ont des valeurs correctes et réessayez."
 
 #: src/Utils.vala:44
 msgid "Status"
-msgstr "Status"
+msgstr "Statut"
 
 #: src/Utils.vala:121
 msgid "Is a file selected?"
@@ -36,11 +36,11 @@ msgstr "Un fichier est-il sélectionné ?"
 
 #: src/Window.vala:23
 msgid "Gifup"
-msgstr ""
+msgstr "Gifup"
 
 #: src/Window.vala:44
 msgid "Open your favourite file"
-msgstr ""
+msgstr "Ouvrez votre fichier favoris"
 
 #: src/Window.vala:62
 msgid "Basic Options"
@@ -56,28 +56,24 @@ msgstr "Créer un GIF !"
 
 #: src/Window.vala:91
 msgid "Convert Complete Video"
-msgstr ""
+msgstr "Convertir la vidéo complète"
 
 #: src/Widgets/AdvanceOptions.vala:22
-#, fuzzy
 msgid "Gif height:"
-msgstr "Taille du Gif :"
+msgstr "Hauteur du Gif :"
 
 #: src/Widgets/AdvanceOptions.vala:29
-#, fuzzy
 msgid "Gif width:"
-msgstr "Taille du Gif :"
+msgstr "Largeur du Gif :"
 
 #: src/Widgets/AdvanceOptions.vala:35
 msgid "Frames Per Seconds:"
 msgstr "Images par seconde :"
 
 #: src/Widgets/BasicOptions.vala:21
-#, fuzzy
 msgid "Start Time :"
-msgstr "Temps de début (hh:mm:ss) :"
+msgstr "Temps de ébut :"
 
 #: src/Widgets/BasicOptions.vala:25
-#, fuzzy
 msgid "End Time :"
-msgstr "Temps de fin (hh:mm:ss) :"
+msgstr "Temps de fin :"
