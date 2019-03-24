@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.bharatkalluri.gifup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 04:25-0500\n"
+"POT-Creation-Date: 2019-03-24 13:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,6 +32,14 @@ msgstr ""
 
 #: src/Utils.vala:121
 msgid "Is a file selected?"
+msgstr ""
+
+#: src/Window.vala:23
+msgid "Gifup"
+msgstr ""
+
+#: src/Window.vala:44
+msgid "Open your favourite file"
 msgstr ""
 
 #: src/Window.vala:62
@@ -68,65 +76,4 @@ msgstr ""
 
 #: src/Widgets/BasicOptions.vala:25
 msgid "End Time :"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.desktop.in:3
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:6
-msgid "Gifup"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.desktop.in:4
-msgid "Create GIFs in Linux"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.desktop.in:6
-msgid "Create GIFs from Videos!"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.desktop.in:10
-msgid "com.github.bharatkalluri.gifup"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.desktop.in:15
-msgid "gif;"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.desktop.in:20
-msgid "About Gifup"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:7
-msgid "Create GIFs from Videos quickly!"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:9
-msgid "Gifup is a simple and effective way to create GIFs from video files."
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:10
-msgid "Features:"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:12
-msgid "Control start and end time of the GIF"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:13
-msgid "Watch live preview of the start and end frames"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:14
-msgid "Control frames per second and height of the gif"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:15
-msgid "Convert complete video into a GIF"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:21
-msgid "Bharat Kalluri"
-msgstr ""
-
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:34
-msgid "UI Revamp, Changed screenshot!"
 msgstr ""

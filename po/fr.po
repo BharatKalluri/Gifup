@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-05 23:36+0200\n"
+"POT-Creation-Date: 2019-03-24 13:54+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -13,66 +13,67 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Generator: Poedit 2.0.4\n"
 
-#: ../src/Window.vala:50
-msgid "Select a File!"
-msgstr "Sélectionnez un fichier !"
-
-#: ../src/Window.vala:69
-msgid "Basic Options"
-msgstr "Options de base"
-
-#: ../src/Window.vala:71
-msgid "Advanced Options"
-msgstr "Options avancées"
-
-#: ../src/Window.vala:85
-msgid "Tip: Click enter after entering time for previews!"
-msgstr "Conseil : Appuyez sur entrée après avoir mis le temps pour voir un aperçu !"
-
-#: ../src/Window.vala:92
-msgid "Make GIF!"
-msgstr "Créer un GIF !"
-
-#: ../src/Window.vala:116
-msgid "Start Time (hh:mm:ss):"
-msgstr "Temps de début (hh:mm:ss) :"
-
-#: ../src/Window.vala:120
-msgid "End Time (hh:mm:ss):"
-msgstr "Temps de fin (hh:mm:ss) :"
-
-#: ../src/Window.vala:149
-msgid "Gif Height:"
-msgstr "Taille du Gif :"
-
-#: ../src/Window.vala:154
-msgid "Frames Per Seconds:"
-msgstr "Images par seconde :"
-
-#: ../src/Window.vala:168
-msgid "Status"
-msgstr "Status"
-
-#: ../src/Window.vala:174
-msgid "Open File"
-msgstr "Ouvrir un fichier"
-
-#: ../src/Window.vala:176
-msgid "_Cancel"
-msgstr "_Annuler"
-
-#: ../src/Window.vala:177
-msgid "_Open"
-msgstr "_Ouvrir"
-
-#: ../src/Window.vala:194
+#: src/Utils.vala:11 src/Utils.vala:31
+#, c-format
 msgid "Gif is Up at %s!"
 msgstr "Le Gif est disponible dans %s !"
 
-#: ../src/Window.vala:199
+#: src/Utils.vala:16 src/Utils.vala:36
 msgid "Check if all fields have sane values and try again."
 msgstr "Vérifiez si tous les champs ont des valeurs correctes et réessayez."
 
-#: ../src/Window.vala:219
+#: src/Utils.vala:44
+msgid "Status"
+msgstr "Status"
+
+#: src/Utils.vala:121
 msgid "Is a file selected?"
 msgstr "Un fichier est-il sélectionné ?"
+
+#: src/Window.vala:23
+msgid "Gifup"
+msgstr ""
+
+#: src/Window.vala:44
+msgid "Open your favourite file"
+msgstr ""
+
+#: src/Window.vala:62
+msgid "Basic Options"
+msgstr "Options de base"
+
+#: src/Window.vala:64
+msgid "Advanced Options"
+msgstr "Options avancées"
+
+#: src/Window.vala:79
+msgid "Make GIF!"
+msgstr "Créer un GIF !"
+
+#: src/Window.vala:91
+msgid "Convert Complete Video"
+msgstr ""
+
+#: src/Widgets/AdvanceOptions.vala:22
+#, fuzzy
+msgid "Gif height:"
+msgstr "Taille du Gif :"
+
+#: src/Widgets/AdvanceOptions.vala:29
+#, fuzzy
+msgid "Gif width:"
+msgstr "Taille du Gif :"
+
+#: src/Widgets/AdvanceOptions.vala:35
+msgid "Frames Per Seconds:"
+msgstr "Images par seconde :"
+
+#: src/Widgets/BasicOptions.vala:21
+#, fuzzy
+msgid "Start Time :"
+msgstr "Temps de début (hh:mm:ss) :"
+
+#: src/Widgets/BasicOptions.vala:25
+#, fuzzy
+msgid "End Time :"
+msgstr "Temps de fin (hh:mm:ss) :"
