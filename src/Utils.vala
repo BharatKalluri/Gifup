@@ -1,14 +1,14 @@
 namespace Gifup.Utils {
 
     public void complete_gif_create (string selected_file, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_height, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
-        var gifout_path = GLib.Path.build_filename (Environment.get_home_dir (),"Downloads", "gifout.gif");
+        var gifout_path = GLib.Path.build_filename (selected_dir, "gifout.gif");
         //  create gif using the entire file selected
         string [] cmd = {"ffmpeg", "-i", selected_file, "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":" + entry_height.text , gifout_path, "-y"};
         execute_command_async.begin (cmd, (obj, async_res) => {
             var subprocess = Utils.execute_command_async.end (async_res);
             try {
                 if (subprocess != null && subprocess.wait_check ()) {
-                    create_dialog (_("Gif is Up at %s!").printf (gifout_path));
+                    create_dialog (_("Gif is Up at:\n %s!").printf (gifout_path));
                 }
 
                 } catch (Error e) {
@@ -20,7 +20,7 @@ namespace Gifup.Utils {
     }
 
     public void gif_create (string selected_file, Gifup.TimePicker entry_end, Gifup.TimePicker entry_start, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_height, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
-            var gifout_path = GLib.Path.build_filename (Environment.get_home_dir (),"Downloads", "gifout.gif");
+            var gifout_path = GLib.Path.build_filename (selected_dir, "gifout.gif");
             string difference =  (entry_end.duration_in_sec() - entry_start.duration_in_sec()).to_string();
             //  create gif using the file selected and the timings given
             string [] cmd = {"ffmpeg", "-ss", entry_start.duration_in_sec().to_string(), "-i", selected_file, "-to", difference, "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":" + entry_height.text, gifout_path, "-y"};
@@ -28,7 +28,7 @@ namespace Gifup.Utils {
                 var subprocess = Utils.execute_command_async.end (async_res);
                 try {
                     if (subprocess != null && subprocess.wait_check ()) {
-                        create_dialog (_("Gif is Up at %s!").printf (gifout_path));
+                        create_dialog (_("Gif is Up at:\n %s!").printf (gifout_path));
                     }
 
                 } catch (Error e) {
@@ -48,7 +48,7 @@ namespace Gifup.Utils {
 
     public Gtk.Label create_left_label (string text) {
             var label = new Gtk.Label (GLib.Markup.printf_escaped ("<b>%s</b>", text));
-            label.xalign = 1;
+            label.xalign = 0;
             label.use_markup = true;
             return label;
     }
