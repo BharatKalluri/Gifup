@@ -1,27 +1,25 @@
-# project name and programming language
-project('com.github.bharatkalluri.gifup', 'vala', 'c')
+project('com.github.bharatkalluri.gifup', 'vala', 'c', version: '0.0.21')
 
-# Include the translations module
+gnome = import('gnome')
 i18n = import('i18n')
 
-# Set our translation domain
-add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
+add_project_arguments(
+    '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
+    language: 'c'
+)
 
-# Create a new executable, list the files we want to compile, list the dependencies we need, and install
+subdir('src')
+
 executable(
     meson.project_name(),
-    'src/Gifup.vala',
-    'src/Utils.vala',
-    'src/Window.vala',
-    'src/Widgets/AdvanceOptions.vala',
-    'src/Widgets/BasicOptions.vala',
-    'src/Widgets/TimePicker.vala',
+    sources,
     dependencies: [
         dependency('gtk+-3.0'),
     ],
     install: true
 )
 
-subdir('po')
 subdir('data')
+subdir('po')
+
 meson.add_install_script('meson/post_install.py')
