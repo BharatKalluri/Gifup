@@ -1,6 +1,8 @@
 using Gtk;
 
-namespace Gifup { 
+public string selected_dir;
+
+namespace Gifup {
     class Window : Gtk.Window {
         // Init all UI elements
         private Gtk.Grid grid;
@@ -10,11 +12,13 @@ namespace Gifup {
         public Gtk.Button gif_button;
         public Gtk.Button complete_gif;
         public Gtk.FileChooserButton file_button;
+        public Gtk.FileChooserButton save_dir_button;
         public Gtk.Spinner spinner;
-
         public string selected_file;
+
+
         public Window () {
-            // Gtk.Settings.get_default().gtk_application_prefer_dark_theme = true;
+            //Gtk.Settings.get_default().gtk_application_prefer_dark_theme = true;
             this.resizable = false;
             this.window_position = Gtk.WindowPosition.CENTER;
 
@@ -29,7 +33,7 @@ namespace Gifup {
 
             this.destroy.connect ( Gtk.main_quit );
             show_all();
-            
+
             Gtk.main ();
         }
 
@@ -39,20 +43,41 @@ namespace Gifup {
             grid.column_spacing = 6;
             grid.row_spacing = 12;
             grid.hexpand = true;
+            grid.margin_start = 12;
+            grid.margin_end = 12;
 
             //File Open button row 0
             file_button = new Gtk.FileChooserButton (_("Open your favourite file"), Gtk.FileChooserAction.OPEN);
             file_button.margin_top = 10;
             file_button.margin_start = 10;
             file_button.margin_end = 10;
+            grid.add(Gifup.Utils.create_left_label (_("Select video:")));
             grid.add (file_button);
             // File open button events
             file_button.selection_changed.connect (() => {
-                selected_file = file_button.get_uri().split(":")[1].replace ("%20", " ");
+                selected_file = file_button.get_filename();
                 grid_basic.selected_file = selected_file;
-                gif_button.sensitive = true;
-                complete_gif.sensitive = true;
+                if (selected_dir != null){
+                	gif_button.sensitive = true;
+                	complete_gif.sensitive = true;
+                }
             });
+
+            save_dir_button = new Gtk.FileChooserButton ("Select save directory", Gtk.FileChooserAction.SELECT_FOLDER);
+            save_dir_button.margin_top = 10;
+            save_dir_button.margin_start = 10;
+            save_dir_button.margin_end = 10;
+            grid.add (Gifup.Utils.create_left_label (_("Select save directory:")));
+            grid.add (save_dir_button);
+            // File open button events
+            save_dir_button.selection_changed.connect (() => {
+                selected_dir = save_dir_button.get_filename();
+                if (selected_file != null){
+                	gif_button.sensitive = true;
+                	complete_gif.sensitive = true;
+                }
+            });
+
 
             // A stack to row 1
             var stack = new Stack ();

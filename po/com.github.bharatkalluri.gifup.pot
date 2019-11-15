@@ -19,7 +19,7 @@ msgstr ""
 
 #: src/Utils.vala:11 src/Utils.vala:31
 #, c-format
-msgid "Gif is Up at %s!"
+msgid "Gif is Up at:\n %s!"
 msgstr ""
 
 #: src/Utils.vala:16 src/Utils.vala:36
@@ -40,6 +40,13 @@ msgstr ""
 
 #: src/Window.vala:44
 msgid "Open your favourite file"
+
+#: src/Window.vala:54
+msgid "Select video:"
+msgstr ""
+
+#: src/Window.vala:70
+msgid "Select save directory:"
 msgstr ""
 
 #: src/Window.vala:62
