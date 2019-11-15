@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <component type="desktop">
   <id>com.github.bharatkalluri.gifup.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -24,21 +24,21 @@
   <url type="help">https://github.com/bharatkalluri/gifup/issues</url>
   <screenshots>
     <screenshot type="default">
-        <image>https://raw.githubusercontent.com/BharatKalluri/Gifup/master/Screenshot.png</image>
+      <image>https://raw.githubusercontent.com/BharatKalluri/Gifup/master/Screenshot.png</image>
     </screenshot>
   </screenshots>
-<releases>
-  <release version="0.0.21" date="2018-07-18">
-            <description>
-                <ul>
-                    <li>UI Revamp, Changed screenshot!</li>
-                </ul>
-            </description>
+  <releases>
+    <release version="0.0.21" date="2018-07-18">
+      <description>
+        <ul>
+          <li>UI Revamp, Changed screenshot!</li>
+        </ul>
+      </description>
     </release>
-</releases>
+  </releases>
   <update_contact>kalluribharat@gmail.com</update_contact>
   <custom>
-     <value key="x-appcenter-color-primary">#C64A89</value>
+    <value key="x-appcenter-color-primary">#C64A89</value>
   </custom>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
