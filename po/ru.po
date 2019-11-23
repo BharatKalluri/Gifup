@@ -1,7 +1,7 @@
 # Russian translations for com.github.bharatkalluri.gifup package.
 # Copyright (C) 2019 THE com.github.bharatkalluri.gifup'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.bharatkalluri.gifup package.
-# Automatically generated, 2019.
+# Andrey Kultyapov <camellan@yandex.ru>, 2019.
 #
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-23 21:39+0900\n"
 "PO-Revision-Date: 2019-11-23 21:39+0900\n"
-"Last-Translator: Automatically generated\n"
+"Last-Translator: Andrey Kultyapov <camellan@yandex.ru>\n"
 "Language-Team: none\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
