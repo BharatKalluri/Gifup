@@ -12,6 +12,8 @@ namespace Gifup {
         
         public override void activate () {
             window = new Window ();
+            window.set_application (this);
+            window.show_all ();
         }
 
         public static int main (string [] args) {
