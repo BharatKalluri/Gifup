@@ -27,6 +27,7 @@ namespace Gifup {
             headerbar.title = _("Gifup");
             headerbar.get_style_context ().add_class(Gtk.STYLE_CLASS_FLAT);
             headerbar.show_close_button = true;
+            headerbar.has_subtitle = false;
             this.set_titlebar (headerbar);
 
             build_ui();
@@ -45,6 +46,8 @@ namespace Gifup {
             grid.hexpand = true;
             grid.margin_start = 12;
             grid.margin_end = 12;
+            grid.margin_top = 12;
+            grid.margin_bottom = 12;
 
             //File Open button row 0
             file_button = new Gtk.FileChooserButton (_("Open your favourite file"), Gtk.FileChooserAction.OPEN);
