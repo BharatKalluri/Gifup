@@ -1,5 +1,4 @@
 namespace Gifup.Utils {
-
     public void complete_gif_create (string selected_file, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_height, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
         var gifout_path = GLib.Path.build_filename (Window.selected_dir, "gifout.gif");
         //  create gif using the entire file selected
@@ -10,68 +9,47 @@ namespace Gifup.Utils {
                 if (subprocess != null && subprocess.wait_check ()) {
                     create_dialog (_("Gif is Up at:\n %s!").printf (gifout_path));
                 }
+            } catch (Error e) {
+                critical (e.message);
+                create_dialog (_("Check if all fields have sane values and try again."));
+            }
 
-                } catch (Error e) {
-                    critical (e.message);
-                    create_dialog (_("Check if all fields have sane values and try again."));
-                }
-                spinner.active = false;
-            });
+            spinner.active = false;
+        });
     }
 
     public void gif_create (string selected_file, Gifup.TimePicker entry_end, Gifup.TimePicker entry_start, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_height, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
-            var gifout_path = GLib.Path.build_filename (Window.selected_dir, "gifout.gif");
-            string difference =  (entry_end.duration_in_sec() - entry_start.duration_in_sec()).to_string();
-            //  create gif using the file selected and the timings given
-            string [] cmd = {"ffmpeg", "-ss", entry_start.duration_in_sec().to_string(), "-i", selected_file, "-to", difference, "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":" + entry_height.text, gifout_path, "-y"};
-            Utils.execute_command_async.begin (cmd, (obj, async_res) => {
-                var subprocess = Utils.execute_command_async.end (async_res);
-                try {
-                    if (subprocess != null && subprocess.wait_check ()) {
-                        create_dialog (_("Gif is Up at:\n %s!").printf (gifout_path));
-                    }
-
-                } catch (Error e) {
-                    critical (e.message);
-                    create_dialog (_("Check if all fields have sane values and try again."));
+        var gifout_path = GLib.Path.build_filename (Window.selected_dir, "gifout.gif");
+        string difference = (entry_end.duration_in_sec () - entry_start.duration_in_sec ()).to_string ();
+        //  create gif using the file selected and the timings given
+        string [] cmd = {"ffmpeg", "-ss", entry_start.duration_in_sec ().to_string (), "-i", selected_file, "-to", difference, "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":" + entry_height.text, gifout_path, "-y"};
+        Utils.execute_command_async.begin (cmd, (obj, async_res) => {
+            var subprocess = Utils.execute_command_async.end (async_res);
+            try {
+                if (subprocess != null && subprocess.wait_check ()) {
+                    create_dialog (_("Gif is Up at:\n %s!").printf (gifout_path));
                 }
-               spinner.active = false;
-            });
+            } catch (Error e) {
+                critical (e.message);
+                create_dialog (_("Check if all fields have sane values and try again."));
+            }
+
+            spinner.active = false;
+        });
     }
 
     public void create_dialog (string text) {
-        var dialog = new Gtk.MessageDialog(null,Gtk.DialogFlags.MODAL,Gtk.MessageType.INFO, Gtk.ButtonsType.OK, text);
+        var dialog = new Gtk.MessageDialog (null, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, text);
         dialog.set_title (_("Status"));
         dialog.run ();
         dialog.destroy ();
     }
 
     public Gtk.Label create_left_label (string text) {
-            var label = new Gtk.Label (GLib.Markup.printf_escaped ("<b>%s</b>", text));
-            label.xalign = 0;
-            label.use_markup = true;
-            return label;
-    }
-
-    public int duration_in_seconds (string duration) {
-        string[] str = duration.split (".");
-        string[] time = str[0].split (":");
-        int hours = 0;
-        int mins = 0;
-        int secs = 0;
-        if (time.length==1){
-            secs = int.parse (time[0]);
-        } else if (time.length==2){
-            secs = int.parse (time[1]);
-            mins = int.parse (time[0]);
-        } else if (time.length==3){
-            secs = int.parse (time[2]);
-            mins = int.parse (time[1]);
-            hours = int.parse (time[0]);
-        }
-
-        var converted_int =  secs + (hours * 3600) + (mins * 60);
-        return converted_int;
+        var label = new Gtk.Label (GLib.Markup.printf_escaped ("<b>%s</b>", text));
+        label.xalign = 0;
+        label.use_markup = true;
+        return label;
     }
 
     public async Subprocess? execute_command_async (string[] spawn_args) {
@@ -94,32 +72,32 @@ namespace Gifup.Utils {
                 if (str_return == null) {
                     return subprocess;
                 } else {
-                   GLib.message (str_return);
+                   message (str_return);
                 }
             }
         } catch (Error e) {
-            GLib.message("Erro %s", e.message);
+            message ("Error %s", e.message);
             return null;
         }
     }
 
-    void frame_picture (string selected_file, int frame_number, string file_name, Gtk.Image image_widget) {
-            var path = GLib.Path.build_filename (GLib.Environment.get_tmp_dir (), file_name + ".bmp");
-            string [] cmd = {"ffmpeg","-hide_banner","-loglevel", "debug", "-ss", frame_number.to_string(), "-i", selected_file, "-frames:v", "1", "-filter:v", "scale=150:-1", path, "-y"};
-            Utils.execute_command_async.begin (cmd, (obj, async_res) => {
-                var subprocess = Utils.execute_command_async.end (async_res);
-                try {
-                    if (subprocess != null && subprocess.wait_check ()) {
-                        message ("Image file sucess!");
-                        var start_path = GLib.Path.build_filename (GLib.Environment.get_tmp_dir (), "gifup_start.bmp");
-                        if (FileUtils.test(start_path, GLib.FileTest.EXISTS) && selected_file != null) {
-                            image_widget.set_from_file (path);
-                        }
+    public void frame_picture (string selected_file, int frame_number, string file_name, Gtk.Image image_widget) {
+        var path = GLib.Path.build_filename (GLib.Environment.get_tmp_dir (), file_name + ".bmp");
+        string [] cmd = {"ffmpeg", "-hide_banner", "-loglevel", "debug", "-ss", frame_number.to_string (), "-i", selected_file, "-frames:v", "1", "-filter:v", "scale=150:-1", path, "-y"};
+        Utils.execute_command_async.begin (cmd, (obj, async_res) => {
+            var subprocess = Utils.execute_command_async.end (async_res);
+            try {
+                if (subprocess != null && subprocess.wait_check ()) {
+                    message ("Image file sucess!");
+                    var start_path = GLib.Path.build_filename (GLib.Environment.get_tmp_dir (), "gifup_start.bmp");
+                    if (FileUtils.test (start_path, GLib.FileTest.EXISTS) && selected_file != null) {
+                        image_widget.set_from_file (path);
                     }
-                } catch (Error e) {
-                    critical (e.message);
-                    create_dialog (_("Is a file selected?"));
                 }
-            });
+            } catch (Error e) {
+                critical (e.message);
+                create_dialog (_("Is a file selected?"));
+            }
+        });
     }
 }
