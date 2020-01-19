@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.bharatkalluri.gifup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-24 14:09+0100\n"
+"POT-Creation-Date: 2020-01-19 13:54+0100\n"
 "PO-Revision-Date: 2019-03-24 14:09+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,8 +17,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/Utils.vala:11 src/Utils.vala:31
-#, c-format
-msgid "Gif is Up at %s!"
+#, fuzzy, c-format
+msgid ""
+"Gif is Up at:\n"
+" %s!"
 msgstr "Trobareu el GIF a %s."
 
 #: src/Utils.vala:16 src/Utils.vala:36
@@ -34,27 +36,37 @@ msgstr "Estat:"
 msgid "Is a file selected?"
 msgstr "Heu seleccionat un fitxer?"
 
-#: src/Window.vala:23
+#: src/Window.vala:27
 msgid "Gifup"
 msgstr "Gifup"
 
-#: src/Window.vala:44
+#: src/Window.vala:48
 msgid "Open your favourite file"
 msgstr ""
 
-#: src/Window.vala:62
+#: src/Window.vala:52
+#, fuzzy
+msgid "Select video:"
+msgstr "Seleccioneu un fitxer."
+
+#: src/Window.vala:68
+#, fuzzy
+msgid "Select save directory:"
+msgstr "Seleccioneu un fitxer."
+
+#: src/Window.vala:85
 msgid "Basic Options"
 msgstr "Opcions bàsiques"
 
-#: src/Window.vala:64
+#: src/Window.vala:87
 msgid "Advanced Options"
 msgstr "Opcions avançades"
 
-#: src/Window.vala:79
+#: src/Window.vala:102
 msgid "Make GIF!"
 msgstr "Crea el GIF"
 
-#: src/Window.vala:91
+#: src/Window.vala:114
 msgid "Convert Complete Video"
 msgstr "Converteix el vídeo sencer"
 
@@ -122,9 +134,6 @@ msgstr "Acabament:"
 
 #~ msgid "UI Revamp, Changed screenshot!"
 #~ msgstr "Modernització de la IU; canvi de captura de pantalla"
-
-#~ msgid "Select a File!"
-#~ msgstr "Seleccioneu un fitxer."
 
 #~ msgid "Tip: Click enter after entering time for previews!"
 #~ msgstr ""
