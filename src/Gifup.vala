@@ -14,6 +14,13 @@ namespace Gifup {
             window = new Window ();
             window.set_application (this);
             window.show_all ();
+
+            var quit_action = new SimpleAction ("quit", null);
+            add_action (quit_action);
+            set_accels_for_action ("app.quit", {"<Control>q"});
+            quit_action.activate.connect (() => {
+                window.destroy ();
+            });
         }
 
         public static int main (string [] args) {
