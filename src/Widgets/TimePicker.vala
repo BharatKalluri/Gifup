@@ -7,8 +7,8 @@ public class Gifup.TimePicker : Gtk.Grid {
 
     construct {
         hr_picker = new Gtk.SpinButton.with_range (0, 60, 1);
-        min_picker = new Gtk.SpinButton.with_range (0,60,1);
-        sec_picker = new Gtk.SpinButton.with_range (0,60,1);
+        min_picker = new Gtk.SpinButton.with_range (0, 60, 1);
+        sec_picker = new Gtk.SpinButton.with_range (0, 60, 1);
         hr_picker.set_orientation (Gtk.Orientation.VERTICAL);
         min_picker.set_orientation (Gtk.Orientation.VERTICAL);
         sec_picker.set_orientation (Gtk.Orientation.VERTICAL);
