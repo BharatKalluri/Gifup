@@ -1,16 +1,20 @@
+# Catalan translations for com.github.bharatkalluri.gifup package.
+# Copyright (C) 2019 THE com.github.bharatkalluri.gifup'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.bharatkalluri.gifup package.
+# Automatically generated, 2019.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: com.github.bharatkalluri.gifup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 04:25-0500\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-03-24 14:09+0100\n"
+"PO-Revision-Date: 2019-03-24 14:09+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
 
 #: src/Utils.vala:11 src/Utils.vala:31
 #, c-format
@@ -19,7 +23,8 @@ msgstr "Trobareu el GIF a %s."
 
 #: src/Utils.vala:16 src/Utils.vala:36
 msgid "Check if all fields have sane values and try again."
-msgstr "Comproveu que tots els camps tinguin valors adecuats i torneu-ho a intentar."
+msgstr ""
+"Comproveu que tots els camps tinguin valors adecuats i torneu-ho a intentar."
 
 #: src/Utils.vala:44
 msgid "Status"
@@ -28,6 +33,14 @@ msgstr "Estat:"
 #: src/Utils.vala:121
 msgid "Is a file selected?"
 msgstr "Heu seleccionat un fitxer?"
+
+#: src/Window.vala:23
+msgid "Gifup"
+msgstr "Gifup"
+
+#: src/Window.vala:44
+msgid "Open your favourite file"
+msgstr ""
 
 #: src/Window.vala:62
 msgid "Basic Options"
@@ -65,72 +78,58 @@ msgstr "Inici:"
 msgid "End Time :"
 msgstr "Acabament:"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:3
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:6
-msgid "Gifup"
-msgstr "Gifup"
+#~ msgid "Create GIFs in Linux"
+#~ msgstr "Creeu GIF al Linux"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:4
-msgid "Create GIFs in Linux"
-msgstr "Creeu GIF al Linux"
+#~ msgid "Create GIFs from Videos!"
+#~ msgstr "Creeu GIF a partir de vídeos!"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:6
-msgid "Create GIFs from Videos!"
-msgstr "Creeu GIF a partir de vídeos!"
+#~ msgid "com.github.bharatkalluri.gifup"
+#~ msgstr "com.github.bharatkalluri.gifup"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:10
-msgid "com.github.bharatkalluri.gifup"
-msgstr "com.github.bharatkalluri.gifup"
+#~ msgid "gif;"
+#~ msgstr "gif;"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:15
-msgid "gif;"
-msgstr "gif;"
+#~ msgid "About Gifup"
+#~ msgstr "Quant al Gifup"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:20
-msgid "About Gifup"
-msgstr "Quant al Gifup"
+#~ msgid "Create GIFs from Videos quickly!"
+#~ msgstr "Creeu GIF a partir de vídeos amb rapidesa"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:7
-msgid "Create GIFs from Videos quickly!"
-msgstr "Creeu GIF a partir de vídeos amb rapidesa"
+#~ msgid "Gifup is a simple and effective way to create GIFs from video files."
+#~ msgstr ""
+#~ "El Gifup és una eina senzilla i eficaç per a crear GIF a partir de "
+#~ "fitxers de vídeo."
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:9
-msgid "Gifup is a simple and effective way to create GIFs from video files."
-msgstr "El Gifup és una eina senzilla i eficaç per a crear GIF a partir de fitxers de vídeo."
+#~ msgid "Features:"
+#~ msgstr "Funcionalitats:"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:10
-msgid "Features:"
-msgstr "Funcionalitats:"
+#~ msgid "Control start and end time of the GIF"
+#~ msgstr "Controla el temps d’inici i acabament del GIF"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:12
-msgid "Control start and end time of the GIF"
-msgstr "Controla el temps d’inici i acabament del GIF"
+#~ msgid "Watch live preview of the start and end frames"
+#~ msgstr ""
+#~ "Mostra una previsualització en directe dels fotogrames inicial i final"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:13
-msgid "Watch live preview of the start and end frames"
-msgstr "Mostra una previsualització en directe dels fotogrames inicial i final"
+#~ msgid "Control frames per second and height of the gif"
+#~ msgstr "Controla els fotogrames per segon i l’alçada del GIF"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:14
-msgid "Control frames per second and height of the gif"
-msgstr "Controla els fotogrames per segon i l’alçada del GIF"
+#~ msgid "Convert complete video into a GIF"
+#~ msgstr "Converteix un vídeo sencer en un GIF"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:15
-msgid "Convert complete video into a GIF"
-msgstr "Converteix un vídeo sencer en un GIF"
+#~ msgid "Bharat Kalluri"
+#~ msgstr "Bharat Kalluri"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:21
-msgid "Bharat Kalluri"
-msgstr "Bharat Kalluri"
-
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:34
-msgid "UI Revamp, Changed screenshot!"
-msgstr "Modernització de la IU; canvi de captura de pantalla"
+#~ msgid "UI Revamp, Changed screenshot!"
+#~ msgstr "Modernització de la IU; canvi de captura de pantalla"
 
 #~ msgid "Select a File!"
 #~ msgstr "Seleccioneu un fitxer."
 
 #~ msgid "Tip: Click enter after entering time for previews!"
-#~ msgstr "Consell: premeu Retorn després d’introduir el temps per a una previsualització."
+#~ msgstr ""
+#~ "Consell: premeu Retorn després d’introduir el temps per a una "
+#~ "previsualització."
 
 #~ msgid "Open File"
 #~ msgstr "Obre un fitxer"

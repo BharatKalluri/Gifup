@@ -1,17 +1,21 @@
+# Spanish translations for com.github.bharatkalluri.gifup package.
+# Copyright (C) 2019 THE com.github.bharatkalluri.gifup'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.bharatkalluri.gifup package.
+# Automatically generated, 2019.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: com.github.bharatkalluri.gifup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-26 04:25-0500\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-03-24 14:09+0100\n"
+"PO-Revision-Date: 2019-03-24 14:09+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.1.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/Utils.vala:11 src/Utils.vala:31
 #, c-format
@@ -29,6 +33,14 @@ msgstr "Estado"
 #: src/Utils.vala:121
 msgid "Is a file selected?"
 msgstr "Compruebe que se ha seleccionado un archivo."
+
+#: src/Window.vala:23
+msgid "Gifup"
+msgstr "Gifup"
+
+#: src/Window.vala:44
+msgid "Open your favourite file"
+msgstr ""
 
 #: src/Window.vala:62
 msgid "Basic Options"
@@ -66,72 +78,57 @@ msgstr "Inicio:"
 msgid "End Time :"
 msgstr "Finalización:"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:3
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:6
-msgid "Gifup"
-msgstr "Gifup"
+#~ msgid "Create GIFs in Linux"
+#~ msgstr "Cree GIF en Linux"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:4
-msgid "Create GIFs in Linux"
-msgstr "Cree GIF en Linux"
+#~ msgid "Create GIFs from Videos!"
+#~ msgstr "Cree GIF a partir de vídeos"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:6
-msgid "Create GIFs from Videos!"
-msgstr "Cree GIF a partir de vídeos"
+#~ msgid "com.github.bharatkalluri.gifup"
+#~ msgstr "com.github.bharatkalluri.gifup"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:10
-msgid "com.github.bharatkalluri.gifup"
-msgstr "com.github.bharatkalluri.gifup"
+#~ msgid "gif;"
+#~ msgstr "gif;"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:15
-msgid "gif;"
-msgstr "gif;"
+#~ msgid "About Gifup"
+#~ msgstr "Acerca de Gifup"
 
-#: data/com.github.bharatkalluri.gifup.desktop.in:20
-msgid "About Gifup"
-msgstr "Acerca de Gifup"
+#~ msgid "Create GIFs from Videos quickly!"
+#~ msgstr "Cree GIF desde vídeos rápidamente"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:7
-msgid "Create GIFs from Videos quickly!"
-msgstr "Cree GIF desde vídeos rápidamente"
+#~ msgid "Gifup is a simple and effective way to create GIFs from video files."
+#~ msgstr ""
+#~ "Gifup es una herramienta sencilla y eficaz para crear GIF a partir de "
+#~ "archivos de vídeo."
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:9
-msgid "Gifup is a simple and effective way to create GIFs from video files."
-msgstr "Gifup es una herramienta sencilla y eficaz para crear GIF a partir de archivos de vídeo."
+#~ msgid "Features:"
+#~ msgstr "Funcionalidades:"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:10
-msgid "Features:"
-msgstr "Funcionalidades:"
+#~ msgid "Control start and end time of the GIF"
+#~ msgstr "Control del tiempo de inicio y finalización del GIF"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:12
-msgid "Control start and end time of the GIF"
-msgstr "Control del tiempo de inicio y finalización del GIF"
+#~ msgid "Watch live preview of the start and end frames"
+#~ msgstr "Previsualización en directo de los fotogramas inicial y final"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:13
-msgid "Watch live preview of the start and end frames"
-msgstr "Previsualización en directo de los fotogramas inicial y final"
+#~ msgid "Control frames per second and height of the gif"
+#~ msgstr "Control de fotogramas por segundo y altura del GIF"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:14
-msgid "Control frames per second and height of the gif"
-msgstr "Control de fotogramas por segundo y altura del GIF"
+#~ msgid "Convert complete video into a GIF"
+#~ msgstr "Conversión de vídeos enteros en GIF"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:15
-msgid "Convert complete video into a GIF"
-msgstr "Conversión de vídeos enteros en GIF"
+#~ msgid "Bharat Kalluri"
+#~ msgstr "Bharat Kalluri"
 
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:21
-msgid "Bharat Kalluri"
-msgstr "Bharat Kalluri"
-
-#: data/com.github.bharatkalluri.gifup.appdata.xml.in:34
-msgid "UI Revamp, Changed screenshot!"
-msgstr "Modernización de la IU; cambio de captura de pantalla"
+#~ msgid "UI Revamp, Changed screenshot!"
+#~ msgstr "Modernización de la IU; cambio de captura de pantalla"
 
 #~ msgid "Select a File!"
 #~ msgstr "Seleccione un archivo."
 
 #~ msgid "Tip: Click enter after entering time for previews!"
-#~ msgstr "Consejo: oprima Intro después de introducir el tiempo para obtener una previsualización."
+#~ msgstr ""
+#~ "Consejo: oprima Intro después de introducir el tiempo para obtener una "
+#~ "previsualización."
 
 #~ msgid "Open File"
 #~ msgstr "Abrir un archivo"

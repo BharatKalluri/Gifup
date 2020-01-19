@@ -24,7 +24,7 @@ namespace Gifup {
 
             // Header Bar
             var headerbar = new Gtk.HeaderBar ();
-            headerbar.title = "Gifup";
+            headerbar.title = _("Gifup");
             headerbar.get_style_context ().add_class(Gtk.STYLE_CLASS_FLAT);
             headerbar.show_close_button = true;
             this.set_titlebar (headerbar);
@@ -47,7 +47,7 @@ namespace Gifup {
             grid.margin_end = 12;
 
             //File Open button row 0
-            file_button = new Gtk.FileChooserButton ("Open your favourite file", Gtk.FileChooserAction.OPEN);
+            file_button = new Gtk.FileChooserButton (_("Open your favourite file"), Gtk.FileChooserAction.OPEN);
             file_button.margin_top = 10;
             file_button.margin_start = 10;
             file_button.margin_end = 10;
