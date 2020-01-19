@@ -3,7 +3,7 @@ using Gtk;
 public string selected_dir;
 
 namespace Gifup {
-    class Window : Gtk.Window {
+    class Window : Gtk.ApplicationWindow {
         // Init all UI elements
         private Gtk.Grid grid;
         private AdvanceOptions grid_advance;
@@ -31,11 +31,6 @@ namespace Gifup {
             this.set_titlebar (headerbar);
 
             build_ui();
-
-            this.destroy.connect ( Gtk.main_quit );
-            show_all();
-
-            Gtk.main ();
         }
 
         void build_ui () {
