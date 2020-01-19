@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-24 14:07+0100\n"
+"POT-Creation-Date: 2020-01-19 13:55+0100\n"
 "PO-Revision-Date: 2019-03-24 13:56+0100\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: Français\n"
@@ -48,7 +48,9 @@ msgstr "Créez rapidement des GIF à partir de vidéos !"
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:9
 msgid "Gifup is a simple and effective way to create GIFs from video files."
-msgstr "Gifup est un application simple et efficace pour créer des GIF à partir de fichiers vidéos."
+msgstr ""
+"Gifup est un application simple et efficace pour créer des GIF à partir de "
+"fichiers vidéos."
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:10
 msgid "Features:"

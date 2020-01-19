@@ -1,80 +1,79 @@
-# Russian translations for extra package.
-# Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Andrey Kultyapov <camellan@yandex.ru>, 2019.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-19 13:55+0100\n"
-"PO-Revision-Date: 2019-11-23 21:45+0900\n"
-"Last-Translator: Andrey Kultyapov <camellan@yandex.ru>\n"
-"Language-Team: none\n"
-"Language: ru\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: data/com.github.bharatkalluri.gifup.desktop.in:3
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:6
 msgid "Gifup"
-msgstr "Gifup"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.desktop.in:4
 msgid "Create GIFs in Linux"
-msgstr "Создание Gif-файлов в Linux"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.desktop.in:5
 msgid "Create GIFs from Videos!"
-msgstr "Создание Gif-файлов из видео!"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.desktop.in:8
 msgid "com.github.bharatkalluri.gifup"
-msgstr "com.github.bharatkalluri.gifup"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.desktop.in:13
 msgid "gif;"
-msgstr "gif;"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.desktop.in:17
 msgid "About Gifup"
-msgstr "О программе Gifup"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:7
 msgid "Create GIFs from Videos quickly!"
-msgstr "Быстрое создание Gif-файлов из видео!"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:9
 msgid "Gifup is a simple and effective way to create GIFs from video files."
-msgstr "Gifup это простой и эффективный способ создания Gif-файлов из видео."
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:10
 msgid "Features:"
-msgstr "Особенности:"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:12
 msgid "Control start and end time of the GIF"
-msgstr "Контроль времени начала и окончания Gif-файла"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:13
 msgid "Watch live preview of the start and end frames"
-msgstr "Просмотр видео-превью начала и конца периодов"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:14
 msgid "Control frames per second and height of the gif"
-msgstr "Настройка частоты кадров и высоты изображения"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:15
 msgid "Convert complete video into a GIF"
-msgstr "Конвертирование видео в Gif"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:21
 msgid "Bharat Kalluri"
-msgstr "Bharat Kalluri"
+msgstr ""
 
 #: data/com.github.bharatkalluri.gifup.appdata.xml.in:34
 msgid "UI Revamp, Changed screenshot!"
-msgstr "Исправление интерфейса , изменен скриншот!"
+msgstr ""
