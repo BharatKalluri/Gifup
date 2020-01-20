@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/com/github/bharatkalluri/gifup/" id="com.github.bharatkalluri.gifup">
+    <key name="window-position" type="(ii)">
+      <default>(-1, -1)</default>
+      <summary>Window position</summary>
+      <description>Position of last closed window</description>
+    </key>
+  </schema>
+</schemalist>

@@ -1,5 +1,6 @@
 public class Gifup.GifupApp : Gtk.Application {
     private Window window;
+    public static Settings settings;
 
     public GifupApp () {
         Object (
@@ -8,9 +9,23 @@ public class Gifup.GifupApp : Gtk.Application {
         );
     }
 
+    static construct {
+        settings = new Settings ("com.github.bharatkalluri.gifup");
+    }
+
     public override void activate () {
+        int window_x, window_y;
+        settings.get ("window-position", "(ii)", out window_x, out window_y);
+
         window = new Window ();
         window.set_application (this);
+
+        if (window_x != -1 || window_y != -1) { // Not a first time launch
+            window.move (window_x, window_y);
+        } else { // First time launch
+            window.window_position = Gtk.WindowPosition.CENTER;
+        }
+
         window.show_all ();
 
         var quit_action = new SimpleAction ("quit", null);
