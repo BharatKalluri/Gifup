@@ -1,5 +1,4 @@
 public class Gifup.Window : Gtk.ApplicationWindow {
-    public static string selected_dir { get; private set; }
     private uint configure_id;
 
     // Init all UI elements
@@ -45,7 +44,7 @@ public class Gifup.Window : Gtk.ApplicationWindow {
         file_button.selection_changed.connect (() => {
             selected_file = file_button.get_filename ();
             grid_basic.selected_file = selected_file;
-            if (selected_dir != null) {
+            if (GifupApp.settings.get_string ("destination") != null) {
                 gif_button.sensitive = true;
                 complete_gif.sensitive = true;
             }
@@ -57,15 +56,15 @@ public class Gifup.Window : Gtk.ApplicationWindow {
         save_dir_button.margin_end = 10;
         grid.add (Gifup.Utils.create_left_label (_("Select save directory:")));
         grid.add (save_dir_button);
+        save_dir_button.set_filename (get_destination ());
         // File open button events
         save_dir_button.selection_changed.connect (() => {
-            selected_dir = save_dir_button.get_filename ();
+            GifupApp.settings.set_string ("destination", save_dir_button.get_filename ());
             if (selected_file != null) {
                 gif_button.sensitive = true;
                 complete_gif.sensitive = true;
             }
         });
-
 
         // A stack to row 1
         var stack = new Gtk.Stack ();
@@ -115,6 +114,17 @@ public class Gifup.Window : Gtk.ApplicationWindow {
         });
 
         add (grid);
+    }
+
+    private string get_destination () {
+        string destination = GifupApp.settings.get_string ("destination");
+
+        if (destination == "") {
+            destination = Environment.get_user_special_dir (UserDirectory.VIDEOS);
+            GifupApp.settings.set_string ("destination", destination);
+        }
+
+        return destination;
     }
 
     protected override bool configure_event (Gdk.EventConfigure event) {
