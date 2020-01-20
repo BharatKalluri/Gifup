@@ -5,6 +5,21 @@
       <default>''</default>
       <summary>Default destination</summary>
     </key>
+    <key name="fps" type="i">
+      <default>10</default>
+      <summary>Frame per seconds</summary>
+      <description>FPS value of output files</description>
+    </key>
+    <key name="gif-height" type="i">
+      <default>500</default>
+      <summary>Gif height</summary>
+      <description>Height of output files</description>
+    </key>
+    <key name="gif-width" type="i">
+      <default>500</default>
+      <summary>Gif width</summary>
+      <description>Width of output files</description>
+    </key>
     <key name="window-position" type="(ii)">
       <default>(-1, -1)</default>
       <summary>Window position</summary>

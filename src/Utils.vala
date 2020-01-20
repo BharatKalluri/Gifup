@@ -1,8 +1,8 @@
 namespace Gifup.Utils {
-    public void complete_gif_create (string selected_file, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_height, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
+    public void complete_gif_create (string selected_file, Gtk.Spinner spinner) {
         var gifout_path = GLib.Path.build_filename (GifupApp.settings.get_string ("destination"), "gifout.gif");
         //  create gif using the entire file selected
-        string [] cmd = {"ffmpeg", "-i", selected_file, "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":" + entry_height.text , gifout_path, "-y"};
+        string [] cmd = {"ffmpeg", "-i", selected_file, "-r", GifupApp.settings.get_string ("fps"), "-vf", "scale=" + GifupApp.settings.get_string ("gif-width") + ":" + GifupApp.settings.get_string ("gif-height"), gifout_path, "-y"};
         execute_command_async.begin (cmd, (obj, async_res) => {
             var subprocess = Utils.execute_command_async.end (async_res);
             try {
@@ -18,11 +18,11 @@ namespace Gifup.Utils {
         });
     }
 
-    public void gif_create (string selected_file, Gifup.TimePicker entry_end, Gifup.TimePicker entry_start, Gtk.SpinButton entry_fps, Gtk.SpinButton entry_height, Gtk.SpinButton entry_width, Gtk.Spinner spinner) {
+    public void gif_create (string selected_file, Gifup.TimePicker entry_end, Gifup.TimePicker entry_start, Gtk.Spinner spinner) {
         var gifout_path = GLib.Path.build_filename (GifupApp.settings.get_string ("destination"), "gifout.gif");
         string difference = (entry_end.duration_in_sec () - entry_start.duration_in_sec ()).to_string ();
         //  create gif using the file selected and the timings given
-        string [] cmd = {"ffmpeg", "-ss", entry_start.duration_in_sec ().to_string (), "-i", selected_file, "-to", difference, "-r", entry_fps.text, "-vf", "scale=" + entry_width.text + ":" + entry_height.text, gifout_path, "-y"};
+        string [] cmd = {"ffmpeg", "-ss", entry_start.duration_in_sec ().to_string (), "-i", selected_file, "-to", difference, "-r", GifupApp.settings.get_string ("fps"), "-vf", "scale=" + GifupApp.settings.get_string ("gif-width") + ":" + GifupApp.settings.get_string ("gif-height"), gifout_path, "-y"};
         Utils.execute_command_async.begin (cmd, (obj, async_res) => {
             var subprocess = Utils.execute_command_async.end (async_res);
             try {

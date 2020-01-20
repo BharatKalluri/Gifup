@@ -96,7 +96,7 @@ public class Gifup.Window : Gtk.ApplicationWindow {
         grid.add (gif_button);
         // Event for gif create button
         gif_button.clicked.connect (() => {
-            Gifup.Utils.gif_create (selected_file, grid_basic.entry_end, grid_basic.entry_start, grid_advance.entry_fps, grid_advance.entry_height, grid_advance.entry_width , spinner);
+            Gifup.Utils.gif_create (selected_file, grid_basic.entry_end, grid_basic.entry_start, spinner);
             spinner.active = true;
         });
 
@@ -109,7 +109,7 @@ public class Gifup.Window : Gtk.ApplicationWindow {
         grid.add (complete_gif);
         // Event for complete gif create button
         complete_gif.clicked.connect (() => {
-            Gifup.Utils.complete_gif_create (selected_file, grid_advance.entry_fps, grid_advance.entry_height, grid_advance.entry_width, spinner);
+            Gifup.Utils.complete_gif_create (selected_file, spinner);
             spinner.active = true;
         });
 
