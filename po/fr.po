@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.bharatkalluri.gifup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-19 13:54+0100\n"
+"POT-Creation-Date: 2020-01-26 13:57+0100\n"
 "PO-Revision-Date: 2019-03-24 14:09+0100\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: Français\n"
@@ -17,73 +17,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/Utils.vala:11 src/Utils.vala:31
+#: src/Utils.vala:10 src/Utils.vala:30
 #, fuzzy, c-format
 msgid ""
 "Gif is Up at:\n"
 " %s!"
-msgstr "Le Gif est disponible dans %s !"
+msgstr "Gif disponible dans :\n"
+" %s !"
 
-#: src/Utils.vala:16 src/Utils.vala:36
+#: src/Utils.vala:14 src/Utils.vala:34
 msgid "Check if all fields have sane values and try again."
 msgstr "Vérifiez si tous les champs ont des valeurs correctes et réessayez."
 
-#: src/Utils.vala:44
+#: src/Utils.vala:43
 msgid "Status"
 msgstr "Statut"
 
-#: src/Utils.vala:121
+#: src/Utils.vala:99
 msgid "Is a file selected?"
-msgstr "Un fichier est-il sélectionné ?"
+msgstr "Avez-vous sélectionné un fichier ?"
 
-#: src/Window.vala:27
+#: src/Window.vala:21
 msgid "Gifup"
 msgstr "Gifup"
 
-#: src/Window.vala:48
+#: src/Window.vala:38
 msgid "Open your favourite file"
-msgstr "Ouvrez votre fichier favoris"
+msgstr "Ouvrez votre fichier favori"
 
-#: src/Window.vala:52
+#: src/Window.vala:42
 msgid "Select video:"
-msgstr ""
+msgstr "Sélectionner la vidéo :"
 
-#: src/Window.vala:68
+#: src/Window.vala:58
 msgid "Select save directory:"
-msgstr ""
+msgstr "Sélectionner le dossier de destination :"
 
-#: src/Window.vala:85
+#: src/Window.vala:75
 msgid "Basic Options"
 msgstr "Options de base"
 
-#: src/Window.vala:87
+#: src/Window.vala:77
 msgid "Advanced Options"
 msgstr "Options avancées"
 
-#: src/Window.vala:102
+#: src/Window.vala:92
 msgid "Make GIF!"
-msgstr "Créer un GIF !"
+msgstr "Transformer en GIF !"
 
-#: src/Window.vala:114
+#: src/Window.vala:104
 msgid "Convert Complete Video"
 msgstr "Convertir la vidéo complète"
 
-#: src/Widgets/AdvanceOptions.vala:22
+#: src/Widgets/AdvanceOptions.vala:20
 msgid "Gif height:"
 msgstr "Hauteur du Gif :"
 
-#: src/Widgets/AdvanceOptions.vala:29
+#: src/Widgets/AdvanceOptions.vala:27
 msgid "Gif width:"
 msgstr "Largeur du Gif :"
 
-#: src/Widgets/AdvanceOptions.vala:35
+#: src/Widgets/AdvanceOptions.vala:33
 msgid "Frames Per Seconds:"
 msgstr "Images par seconde :"
 
-#: src/Widgets/BasicOptions.vala:21
+#: src/Widgets/BasicOptions.vala:18
 msgid "Start Time :"
 msgstr "Début :"
 
-#: src/Widgets/BasicOptions.vala:25
+#: src/Widgets/BasicOptions.vala:22
 msgid "End Time :"
 msgstr "Fin :"
