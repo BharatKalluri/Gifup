@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.bharatkalluri.gifup package.
+# André Barata <andretiagob@protonmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.bharatkalluri.gifup\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-19 13:54+0100\n"
+"PO-Revision-Date: 2020-08-25 16:59+0100\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: André Barata <andretiagob@protonmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: pt\n"
+
+#: src/Utils.vala:11 src/Utils.vala:31
+#, c-format
+msgid ""
+"Gif is Up at:\n"
+" %s!"
+msgstr ""
+"Gif está Up em:\n"
+" %s!"
+
+#: src/Utils.vala:16 src/Utils.vala:36
+msgid "Check if all fields have sane values and try again."
+msgstr "Verifique se os campos têm valores corretos e tente outra vez."
+
+#: src/Utils.vala:44
+msgid "Status"
+msgstr "Estado"
+
+#: src/Utils.vala:121
+msgid "Is a file selected?"
+msgstr "Existe algum ficheiro selecionado?"
+
+#: src/Window.vala:27
+msgid "Gifup"
+msgstr "Gifup"
+
+#: src/Window.vala:48
+msgid "Open your favourite file"
+msgstr "Abrir um ficheiro favorito seu"
+
+#: src/Window.vala:52
+msgid "Select video:"
+msgstr "Selecione vídeo:"
+
+#: src/Window.vala:68
+msgid "Select save directory:"
+msgstr "Selecione onde quer gravar:"
+
+#: src/Window.vala:85
+msgid "Basic Options"
+msgstr "Opções Básicas"
+
+#: src/Window.vala:87
+msgid "Advanced Options"
+msgstr "Opções Avançadas"
+
+#: src/Window.vala:102
+msgid "Make GIF!"
+msgstr "Fazer o GIF!"
+
+#: src/Window.vala:114
+msgid "Convert Complete Video"
+msgstr "Converter o Vídeo Completo"
+
+#: src/Widgets/AdvanceOptions.vala:22
+msgid "Gif height:"
+msgstr "Altura do Gif:"
+
+#: src/Widgets/AdvanceOptions.vala:29
+msgid "Gif width:"
+msgstr "Largura do Gif:"
+
+#: src/Widgets/AdvanceOptions.vala:35
+msgid "Frames Per Seconds:"
+msgstr "Fotogramas Por Segundo:"
+
+#: src/Widgets/BasicOptions.vala:21
+msgid "Start Time :"
+msgstr "Tempo de Inicio:"
+
+#: src/Widgets/BasicOptions.vala:25
+msgid "End Time :"
+msgstr "Tempo de Fim:"
