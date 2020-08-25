@@ -21,7 +21,6 @@ public class Gifup.VideoPlayer : Gtk.Box  {
         show.connect (create_sink_and_play);
         destroy.connect (stop_and_destroy);
         this.fileuri = "file://"+filepath;
-        critical(this.fileuri);
     }
 
     private void create_sink_and_play () {

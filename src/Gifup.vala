@@ -38,6 +38,12 @@ public class Gifup.GifupApp : Gtk.Application {
 
     public static int main (string [] args) {
         var app = new GifupApp ();
+        Gtk.init (ref args);
+        Gst.init (ref args);
+        var err = GtkClutter.init (ref args);
+        if (err != Clutter.InitError.SUCCESS) {
+            error ("Could not initalize clutter! "+err.to_string ());
+        }
         return app.run (args);
     }
 }
