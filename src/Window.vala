@@ -6,6 +6,7 @@ public class Gifup.Window : Gtk.ApplicationWindow {
 
     private Gtk.Button gif_button;
     private Gtk.Button complete_gif;
+    private Gifup.VideoPlayer video_player;
     private string selected_file;
 
     public Window () {
@@ -112,6 +113,9 @@ public class Gifup.Window : Gtk.ApplicationWindow {
             Gifup.Utils.complete_gif_create (selected_file, spinner);
             spinner.active = true;
         });
+
+        video_player = new VideoPlayer (selected_file, 720, 720, 500);
+        grid.add (video_player);
 
         add (grid);
     }

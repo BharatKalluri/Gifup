@@ -4,5 +4,6 @@ sources = files(
     'Window.vala',
     'Widgets/AdvanceOptions.vala',
     'Widgets/BasicOptions.vala',
-    'Widgets/TimePicker.vala'
+    'Widgets/TimePicker.vala',
+    'Widgets/VideoPlayer.vala'
 )
