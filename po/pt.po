@@ -53,7 +53,7 @@ msgstr "Selecione vídeo:"
 
 #: src/Window.vala:68
 msgid "Select save directory:"
-msgstr "Selecione onde quer gravar:"
+msgstr "Selecione onde quer guardar:"
 
 #: src/Window.vala:85
 msgid "Basic Options"
