@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-19 13:55+0100\n"
+"PO-Revision-Date: 2021-04-06 21:51+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:3
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:6
+msgid "Gifup"
+msgstr "Gifup"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:4
+msgid "Create GIFs in Linux"
+msgstr "Maak gifjes op Linux"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:5
+msgid "Create GIFs from Videos!"
+msgstr "Zet video's om in gifjes!"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:8
+msgid "com.github.bharatkalluri.gifup"
+msgstr "com.github.bharatkalluri.gifup"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:13
+msgid "gif;"
+msgstr "gif;"
+
+#: data/com.github.bharatkalluri.gifup.desktop.in:17
+msgid "About Gifup"
+msgstr "Over Gifup"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:7
+msgid "Create GIFs from Videos quickly!"
+msgstr "Zet video's snel om in gifjes!"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:9
+msgid "Gifup is a simple and effective way to create GIFs from video files."
+msgstr "Met Gifup kun je heel snel en doeltreffend gifjes maken uit videobestanden."
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:10
+msgid "Features:"
+msgstr "Kenmerken:"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:12
+msgid "Control start and end time of the GIF"
+msgstr "Bepaald de begin- en eindtijd"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:13
+msgid "Watch live preview of the start and end frames"
+msgstr "Bekijken een live-voorvertoning van het eerste tot het laatste frame"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:14
+msgid "Control frames per second and height of the gif"
+msgstr "Kies het aantal frames per seconde en de hoogte"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:15
+msgid "Convert complete video into a GIF"
+msgstr "Converteer een volledige video naar een gifje"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:21
+msgid "Bharat Kalluri"
+msgstr "Bharat Kalluri"
+
+#: data/com.github.bharatkalluri.gifup.appdata.xml.in:34
+msgid "UI Revamp, Changed screenshot!"
+msgstr "Gewijzigd: veel aanpassingen aan de vormgeving en de schermfoto."
